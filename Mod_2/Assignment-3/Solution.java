@@ -1,6 +1,10 @@
 import java.util.Scanner;
-
+/* to find the given numbers power with an exp value*/
 public class Solution {
+    /* To consider inputs*/
+    private Solution(){
+        /* not using the function*/
+    }
     /*
     Do not modify this main function.
     */
@@ -22,3 +26,4 @@ public class Solution {
         }
     }
 }
+
