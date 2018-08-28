@@ -9,7 +9,7 @@ public class Solution {
     Do not modify this main function.
     */
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);  
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
@@ -18,7 +18,7 @@ public class Solution {
     /*
     Need to write the power function and print the output.
     */
-    public static long power(final int b, final int e){
+    public static long power(final int b, final int e) {
         if (e > 0) {
             return b * (power(b, e - 1));
         } else {
