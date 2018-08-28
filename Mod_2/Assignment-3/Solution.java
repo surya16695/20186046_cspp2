@@ -1,12 +1,12 @@
 import java.util.Scanner;
-/* to find the given numbers power with an exp value*/
+/** to find the given numbers power with an exp value**/
 public final class Solution {
     /** To consider inputs.**/
     private Solution() {
         /* not using the function.*/
     }
-    /*
-    Do not modify this main function.
+    /**
+    @param args Do not modify this main function.
     */
     public static void main(final String[] args) {
         /** Assigns values.**/
@@ -16,9 +16,11 @@ public final class Solution {
         long result = power(base, exponent);
         System.out.println(result);
     }
-    /*
-    Need to write the power function and print the output.
-    */
+    /**
+    @param b long Need to write the power function and print the output.
+    @param e long Need to write the power function and print the output.
+    @return long Need to write the power function and print the output.
+    **/
     public static long power(final int b, final int e) {
         /** To evaluate the exponential function.**/
         if (e > 0) {
