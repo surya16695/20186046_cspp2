@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/** to find the given numbers power with an exp value**/
+/** to find the given numbers power with an exp value.**/
 public final class Solution {
     /** To consider inputs.**/
     private Solution() {
@@ -30,4 +30,6 @@ public final class Solution {
         }
     }
 }
+
+
 
