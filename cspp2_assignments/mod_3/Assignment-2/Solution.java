@@ -14,8 +14,7 @@ public class Solution {
         for (int i=1; i<=n; i++) {
         	temp = temp + i;
         }
-       	System.out.println(temp);
-        for ( int i=1; i<=temp.length(); i++ ) {
+        for ( int i=0; i<temp.length(); i++ ) {
         	if (temp.charAt(i) == ('7')) {
 				count += 1;        		
         	}
