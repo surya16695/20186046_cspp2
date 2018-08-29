@@ -5,7 +5,7 @@ import java.util.Scanner;
     */
 public final class Solution {
     /** Creating a class.**/
-    private Solution(){
+    private Solution() {
         /**Doc of no use.**/
     }
     /**
@@ -23,9 +23,7 @@ public final class Solution {
     Need to write the gcd function and print the output.
     */
     public static int gcd(final int a, final int b) {
-        /**
-        gcd function is to be written here.
-        **/
+        /** To evaluate the gcd function.**/
         int gcd = 0;
         for (int i = 1;  i <= a && i <= b; i++) {
             if ((a % i == 0) && (b % i == 0)) {
