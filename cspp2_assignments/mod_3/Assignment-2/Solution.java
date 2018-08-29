@@ -11,7 +11,7 @@ public class Solution {
         int n = s.nextInt();
         int count = 0;
         for (int i=1; i<=n; i++) {
-        	if ((i%10 == 7) || (i/10 == 7)) {
+        	if ((i%10 == 7) & (i/10 == 7)) {
         		count += 1;
         	}
         }
