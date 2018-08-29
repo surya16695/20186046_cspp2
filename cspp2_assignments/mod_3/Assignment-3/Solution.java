@@ -1,8 +1,8 @@
 
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
+    Do not modify this main function.
+    */
 public class Solution {
 
     public static void main(String[] args) {
@@ -14,12 +14,12 @@ public class Solution {
         System.out.println(gcd);
     }
     /*
-	Need to write the gcd function and print the output.
-	*/
-    public static int gcd(int a, int b){
+    Need to write the gcd function and print the output.
+    */
+    public static int gcd(int a, int b) {
         int gcd = 0;      
         for (int i = 1;  i <= a && i <= b; i++) {
-            if ((a%i == 0) && (b%i == 0)){
+            if ((a%i == 0) && (b%i == 0)) {
                 gcd = i;
             }
         }
