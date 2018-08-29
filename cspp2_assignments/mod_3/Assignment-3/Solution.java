@@ -4,7 +4,13 @@ import java.util.Scanner;
     Do not modify this main function.
     */
 public final class Solution {
-
+    /** Creating a class.**/
+    private Solution(){
+        /**Doc of no use.**/
+    }
+    /**
+     @param args Do not modify this main function.
+    **/
     public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
@@ -16,7 +22,7 @@ public final class Solution {
     /*
     Need to write the gcd function and print the output.
     */
-    public static int gcd(int a, int b) {
+    public static int gcd(final int a, final int b) {
         /**
         gcd function is to be written here.
         **/
