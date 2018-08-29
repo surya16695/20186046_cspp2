@@ -10,12 +10,16 @@ public class Solution {
         Scanner s=new Scanner(System.in);      
         int n = s.nextInt();
         int count = 0;
+        String temp = "";
         for (int i=1; i<=n; i++) {
-        	if ((i%10 == 7) & (i/10 == 7)) {
-        		count += 1;
+        	temp = temp + i;
+        }
+       	System.out.println(temp);
+        for ( int i=1; i<=temp.length(); i++ ) {
+        	if (temp.charAt(i) == ('7')) {
+				count += 1;        		
         	}
         }
-       	System.out.println(count);
-        
+        System.out.println(count);
     }
 }
