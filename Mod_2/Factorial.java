@@ -1,6 +1,10 @@
 import java.util.Scanner;
 /**
+<<<<<<< HEAD
  *@author Surya.
+=======
+ *@author. 
+>>>>>>> da111cdb9d8da910a8300881d4cc85bb99c50cb1
  */
 public final class Factorial {
     /*
