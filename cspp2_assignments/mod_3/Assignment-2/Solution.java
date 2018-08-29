@@ -5,10 +5,10 @@ import java.util.Scanner;
     */
 public class Solution {
 /* Fill the main function to print the number of 7's between 1 to n*/
-/** @param args for this solution**/
      private Solution() {
             /** Not using this function**/
         }
+    /** @param args for this solution**/
     public static void main(final String[] args) {
         /**
         To find the number of 7 in given number
