@@ -5,8 +5,8 @@ import java.util.Scanner;
     */
 public final class Solution {
 /**
- Fill the main function to print the number of 7's between 1 to n
-*/
+ Fill the main function to print the number of 7's between 1 to n.
+**/
      private Solution() {
             /** Not using this function**/
         }
@@ -24,7 +24,7 @@ public final class Solution {
         }
         for (int i = 0; i < temp.length(); i++) {
             if (temp.charAt(i) == ('7')) {
-                count += 1;    
+                count += 1;
             }
         }
         System.out.println(count);
