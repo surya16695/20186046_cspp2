@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- *@author 
+ *@author. 
  */
 public final class Factorial {
     /*
