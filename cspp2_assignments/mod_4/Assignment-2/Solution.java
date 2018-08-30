@@ -12,16 +12,16 @@ public class Solution {
         for ( int i = 0; i < m1; i++) {
             for (int j = 0; j < n1; j++) {
                 a[i][j] = s.nextInt();
-                System.out.println(Arrays.toString(a));
             }
         }
+        System.out.println(Arrays.toString(a));
         int[][] b = new int[m2][n2];
         for ( int i = 0; i < m2; i++) {
             for (int j = 0; j < n2; j++) {
                 b[i][j] = s.nextInt();
-                System.out.println(Arrays.toString(b));
             }
         }
+        System.out.println(Arrays.toString(b));
         int[][] c = new int[m2][n2];
         if (m1 == m2 && n1 == n2) {
             String res = "";
