@@ -23,14 +23,14 @@ public class Solution {
 			}
 		}
 		int[][] c = new int[m2][n2];
-            String res = "";
-            for (int i = 0; i < m1; i++) {
-                for (int j = 0; j < n2; j++) {
-                        c[i][j] = a[i][j] + b[i][j];
-                        res += c[i][j] + " ";
-                    }
-                    res = res.trim() + "\n";
-            }
-            System.out.print(res);
+        String res = "";
+        for (int i = 0; i < m1; i++) {
+            for (int j = 0; j < n2; j++) {
+                    c[i][j] = a[i][j] + b[i][j];
+                    res += c[i][j] + " ";
+                }
+                res = res.trim() + "\n";
+        }
+        System.out.print(res);
 	}
 }
