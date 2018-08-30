@@ -14,7 +14,6 @@ public class Solution {
 		for ( int i = 0; i < m1; i++) {
 			for (int j = 0; j < n1; j++) {
 				a[i][j] = s.nextInt();
-				System.out.println(a);		
 			}
 		}
 		int[][] b = new int[m2][n2];
@@ -23,7 +22,6 @@ public class Solution {
 				b[i][j] = s.nextInt();
 			}
 		}
-		System.out.println(b);
 		int[][] c = new int[m2][n2];
             String res = "";
             for (int i = 0; i < m1; i++) {
