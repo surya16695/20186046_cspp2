@@ -30,6 +30,9 @@ public final class Solution {
     /**
     Write binaryToDecimal function.
     **/
+    /**
+    @param s Do not modify this main function.
+    */
     public static int binaryToDecimal(final String s) {
         /**Write binaryToDecimal function.**/
         int sum = 0;
