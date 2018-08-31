@@ -7,16 +7,21 @@ import java.lang.String;
 
 public class Solution {
 	/*
-	Do not modify the main function 
+	Do not modify the main function. 
 	*/
-	public static void main(String[] args) {
+	/**
+    @param s Do not modify this main function.
+    @return integer value.
+    */
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
-		String reverse = reverse(s);	
+		String reverse = reverse(s);
 		System.out.println(reverse);
 	}
 	//Write reverseString function
-	public static String reverse(String s) {
+	public static String reverse(final String s) {
+    	/**@param s Do not modify this main function.**/
 		String rev = "";
 		for (int i = s.length() - 1; i >= 0; i--) {
 			rev = rev + (s .charAt(i));
