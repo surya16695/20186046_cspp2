@@ -19,12 +19,14 @@ public class Solution {
 		String reverse = reverse(s);
 		System.out.println(reverse);
 	}
-	//Write reverseString function
+	/**Write reverseString function.**/
 	public static String reverse(final String s) {
     	/**@param s Do not modify this main function.**/
 		String rev = "";
-		for (int i = s.length() - 1; i >= 0; i--) {
-			rev = rev + (s .charAt(i));
+		for (int i = 0;i<s.length() ; i++) {
+		 	
+	
+			rev = (s .charAt(i))+ rev;
 		}
 		return rev;
 	}
