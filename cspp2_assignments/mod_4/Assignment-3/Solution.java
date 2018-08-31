@@ -4,8 +4,17 @@
 
 import java.util.Scanner;
 public class Solution {
+    /**
+    TO create a soltion.
+    **/
+    private Solution() {
+        /* not using the function.*/
+    }
     /*
     Do not modify this main function.
+    */
+    /**
+    @param args Do not modify this main function.
     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -17,7 +26,7 @@ public class Solution {
             System.out.println(res);
         }
     }
-    public static int binaryToDecimal (String s) {
+    public static int binaryToDecimal(String s) {
         int sum = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '1') {
