@@ -27,6 +27,7 @@ public final class Solution {
             System.out.println(res);
         }
     }
+    /**Write binaryToDecimal function.**/
     public static int binaryToDecimal(final String s) {
         /**Write binaryToDecimal function.**/
         int sum = 0;
