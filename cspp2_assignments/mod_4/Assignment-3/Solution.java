@@ -19,11 +19,9 @@ public class Solution
 	}
 	public static int binaryToDecimal (String s) {
 		int sum = 0;
-		int k = 0;
-		for (int i = s.length() - 1; i >= 0; i--) {
+		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == '1') {
-				sum += Math.pow(2, k);
-				k += 2;
+				sum += Math.pow(2, s.length() - i);
 				// System.out.println(sum);
 			}
 		}
