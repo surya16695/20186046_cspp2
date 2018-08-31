@@ -23,10 +23,8 @@ public class Solution {
 	public static String reverse(final String s) {
     	/**@param s Do not modify this main function.**/
 		String rev = "";
-		for (int i = 0;i<s.length() ; i++) {
-		 	
-	
-			rev = (s .charAt(i))+ rev;
+		for (int i = s.length() - 1; i >= 0; i--) {
+			rev = rev + (s .charAt(i));
 		}
 		return rev;
 	}
