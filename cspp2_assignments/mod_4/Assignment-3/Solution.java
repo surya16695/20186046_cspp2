@@ -22,7 +22,7 @@ public class Solution
 		for (int i = s.length() - 1; i >= 0; i--) {
 			if (s.charAt(i) == '1') {
 				sum += Math.pow(2, i);
-				System.out.println(sum);
+				// System.out.println(sum);
 			}
 		}
 		return (sum);
