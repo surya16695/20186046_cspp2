@@ -15,12 +15,6 @@ public final class Solution {
     /*
     Do not modify the main function.
     */
-    /**.
-    { function_description }
-    @param      args  The arguments
-    @param      s     Do not modify this main function.
-    @return     integer value.
-    */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
