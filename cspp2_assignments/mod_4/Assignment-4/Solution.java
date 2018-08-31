@@ -9,12 +9,21 @@ import java.lang.String;
  * Class for solution.
  */
 public class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
     /*
     Do not modify the main function.
     */
     /**
-    @param s Do not modify this main function.
-    @return integer value.
+    { function_description }
+    
+    @param      args  The arguments
+    @param      s     Do not modify this main function.
+    @return     integer value.
     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -23,7 +32,7 @@ public class Solution {
         System.out.println(reverse);
     }
     /**Write reverseString function.**/
-    /**
+    /**.
      * { function_description }
      *
      * @param      s     { parameter_description }
