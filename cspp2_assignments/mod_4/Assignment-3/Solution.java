@@ -21,7 +21,7 @@ public class Solution
 		int sum = 0;
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == '1') {
-				sum += Math.pow(2, s.length() - i);
+				sum += Math.pow(2, s.length() - i-1);
 				// System.out.println(sum);
 			}
 		}
