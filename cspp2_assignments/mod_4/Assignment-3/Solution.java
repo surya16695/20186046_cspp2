@@ -3,7 +3,7 @@
 
 
 import java.util.Scanner;
-public class Solution {
+public final class Solution {
     /**
     TO create a soltion.
     **/
@@ -16,7 +16,7 @@ public class Solution {
     /**
     @param args Do not modify this main function.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
@@ -26,7 +26,8 @@ public class Solution {
             System.out.println(res);
         }
     }
-    public static int binaryToDecimal(String s) {
+    public static int binaryToDecimal(final String s) {
+        /**Write binaryToDecimal function.**/
         int sum = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '1') {
