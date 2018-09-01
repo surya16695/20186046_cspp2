@@ -27,9 +27,9 @@ final class Solution {
         final char oldChar, final char newChar) {
 	// write your code here
         // char[] chart = new char[];
-        for (char element: charArray) {
-            if (element == oldChar) {
-                charArray[element] = newChar;   
+        for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] == oldChar) {
+                charArray[i] = newChar;   
             }
             
         }
