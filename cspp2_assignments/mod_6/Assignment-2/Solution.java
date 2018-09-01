@@ -31,7 +31,13 @@ final class Solution {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 int d = a[i][j] / 100;
-                System.out.println(d);
+                int e = a[i][j] % 100;
+                if (e < 50) {
+                    c[i][j] = d * 100;    
+                }
+                if (e > 50) {
+                    c[i][j] = (d+1) * 100;
+                }
             }  
         }
         return c;
