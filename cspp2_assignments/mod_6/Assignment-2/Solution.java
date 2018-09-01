@@ -1,11 +1,10 @@
 import java.util.Scanner;
-import java.util.Arrays;
 import java.lang.Math;
 /**
  * Write a java program to round the
  * elements of a matrix to the nearest 100.
  *
- * @author : 
+ * @author :
  */
 final class Solution {
     /**
@@ -24,21 +23,22 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+    static int[][] roundHundred(final int[][] a,
+     final int rows, final int columns) {
 
-	// write ypur code here
+    // write ypur code here
         int[][] c = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 int d = a[i][j] / 100;
                 int e = a[i][j] % 100;
                 if (e < 50) {
-                    c[i][j] = d * 100;    
+                    c[i][j] = d * 100;
                 }
                 if (e > 50) {
-                    c[i][j] = (d+1) * 100;
+                    c[i][j] = (d + 1) * 100;
                 }
-            }  
+            }
         }
         return c;
     }
