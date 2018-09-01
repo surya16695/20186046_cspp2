@@ -28,10 +28,9 @@ final class Solution {
         double[][] c = new double[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                double d = (a[i][j]/100);
-                d = Math.floor(d);
+                int d = (a[i][j]%100);
                 System.out.println(d);
-                if (c[i][j] > 0) {
+                if (d > 50) {
                     c[i][j] = d *100;
                 }
             }  
