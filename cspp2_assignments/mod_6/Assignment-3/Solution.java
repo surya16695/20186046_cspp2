@@ -25,13 +25,12 @@ final class Solution {
      */
     static char[] replaceAll(final char[] charArray,
         final char oldChar, final char newChar) {
-	// write your code here
+    // write your code here
         // char[] chart = new char[];
         for (int i = 0; i < charArray.length; i++) {
             if (charArray[i] == oldChar) {
-                charArray[i] = newChar;   
+                charArray[i] = newChar;
             }
-            
         }
         return charArray;
     }
