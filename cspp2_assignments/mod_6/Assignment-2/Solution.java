@@ -1,13 +1,12 @@
 import java.util.Scanner;
 /**
- * Write a java program to round the
- * elements of a matrix to the nearest 100.
+ * Write a java program to round the elements of a matrix to the nearest 100.
  *
- * @author :
+ * @author     :
  */
 final class Solution {
-    private static final int hunDered = 100;
-    private static final int fiFty = 50;
+    private static final int HUNDERED = 100;
+    private static final int FIFTY = 50;
     /**
      * Constructs the object.
     **/
@@ -30,13 +29,13 @@ final class Solution {
         int[][] c = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                int d = a[i][j] / hunDered;
-                int e = a[i][j] % hunDered;
-                if (e < fiFty) {
-                    c[i][j] = d * hunDered;
+                int d = a[i][j] / HUNDERED;
+                int e = a[i][j] % HUNDERED;
+                if (e < FIFTY) {
+                    c[i][j] = d * HUNDERED;
                 }
-                if (e > fiFty) {
-                    c[i][j] = (d + 1) * hunDered;
+                if (e > FIFTY) {
+                    c[i][j] = (d + 1) * HUNDERED;
                 }
             }
         }
