@@ -42,7 +42,7 @@ public final class Solution {
         for (int i = 2; i < n; i++) {
             if (i % 2 != 0) {
                 isPrime(i);
-                if (true) {
+                if (isPrime(i) == true) {
                     System.out.println(i);
                 }
             }
