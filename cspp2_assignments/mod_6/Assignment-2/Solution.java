@@ -24,10 +24,10 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static double[][] roundHundred(final int[][] a, final int rows, final int columns) {
+    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
 	// write ypur code here
-        double[][] c = new double[rows][columns];
+        int[][] c = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 int d = a[i][j] / 100;
@@ -57,7 +57,7 @@ final class Solution {
                 a[i][j] = scan.nextInt();
             }
         }
-        double[][] b = roundHundred(a, m, n);
+        int[][] b = roundHundred(a, m, n);
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n - 1; j++) {
                 System.out.print(b[i][j] + " ");
