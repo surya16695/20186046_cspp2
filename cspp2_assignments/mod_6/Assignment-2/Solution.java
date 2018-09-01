@@ -6,8 +6,8 @@ import java.util.Scanner;
  * @author :
  */
 final class Solution {
-    private static final int hundered = 100;
-    private static final int fifty = 50;
+    private static final int hunDered = 100;
+    private static final int fiFty = 50;
     /**
      * Constructs the object.
     **/
@@ -30,13 +30,13 @@ final class Solution {
         int[][] c = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                int d = a[i][j] / hundered;
-                int e = a[i][j] % hundered;
-                if (e < fifty) {
-                    c[i][j] = d * hundered;
+                int d = a[i][j] / hunDered;
+                int e = a[i][j] % hunDered;
+                if (e < fiFty) {
+                    c[i][j] = d * hunDered;
                 }
-                if (e > fifty) {
-                    c[i][j] = (d + 1) * hundered;
+                if (e > fiFty) {
+                    c[i][j] = (d + 1) * hunDered;
                 }
             }
         }
