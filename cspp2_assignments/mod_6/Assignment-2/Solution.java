@@ -5,7 +5,9 @@ import java.util.Scanner;
  * @author     :
  */
 final class Solution {
+    /**Specifying 100.**/
     private static final int HUNDERED = 100;
+    /**Specifying 50.**/
     private static final int FIFTY = 50;
     /**
      * Constructs the object.
