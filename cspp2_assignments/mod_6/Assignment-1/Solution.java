@@ -21,7 +21,7 @@ public final class Solution {
      *
      * @return     True if prime, False otherwise.
      */
-    public static void isPrime(final int n) {
+    public static boolean isPrime(final int n) {
         boolean flag = false;
         for (int i = 2; i <= n / 2; i++) {
             // condition for nonprime number
@@ -30,9 +30,7 @@ public final class Solution {
                 break;
             }
         }
-         if (true) {
-            System.out.println(n);
-        }
+        return flag;
     }
     /**
      * { printing composite numbers }.
@@ -44,6 +42,9 @@ public final class Solution {
         for (int i = 2; i < n; i++) {
             if (i % 2 != 0) {
                 isPrime(i);
+                if (true) {
+                    System.out.println(i);
+                }
             }
         }
     }
