@@ -30,7 +30,7 @@ final class Solution {
         double[][] c = new double[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                int d = (a[i][j]%100);
+                float d = (a[i][j]/100);
                 double e = Math.round(d);
                 System.out.println(e);
             }  
