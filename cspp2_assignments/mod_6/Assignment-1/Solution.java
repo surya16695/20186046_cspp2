@@ -33,7 +33,7 @@ public final class Solution {
         return flag;
     }
     /**
-     * { printing composite numbers }
+     * { printing composite numbers }.
      *
      * @param      n     { parameter_description }
      */
@@ -41,7 +41,7 @@ public final class Solution {
     // write your code here
         for (int i = 2; i < n; i++) {
             if (i % 2 != 0) {
-                if (isPrime(i) == true) {
+                if (true) {
                     System.out.println(i);
                 }
             }
@@ -57,4 +57,3 @@ public final class Solution {
         oddComposites(n);
     }
 }
-
