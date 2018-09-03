@@ -8,7 +8,7 @@ final class InputValidator {
      */
     private static final int SIX = 6;
     // private static data;
-    String data;
+    private String data;
     /**
      * Constructs the object.
      *
