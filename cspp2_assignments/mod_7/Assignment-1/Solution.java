@@ -7,6 +7,9 @@ final class InputValidator {
      * { var_description }.
      */
     private static final int SIX = 6;
+    /**
+     * { var_description }.
+     */
     private String data;
     /**
      * Constructs the object.
