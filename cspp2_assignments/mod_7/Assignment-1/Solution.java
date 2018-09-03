@@ -13,14 +13,14 @@ class InputValidator {
         this.data = data;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public  boolean validateData() {
         return (this.data.length() >= SIX);
     }
-    /*Write the atrributes and methods for InputValidator*/
+    /*Write the atrributes and methods for InputValidator.*/
 }
 /**
  * Class for solution.
@@ -33,7 +33,7 @@ public class Solution {
 
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
