@@ -2,12 +2,14 @@ import java.util.Scanner;
 /**
  * Class for input validator.
  */
-class InputValidator {
+final class InputValidator {
     /**
      * { var_description }.
      */
     private static final int SIX = 6;
+    //
     // private static data;
+    //
     String data;
     InputValidator(final String data) {
         this.data = data;
