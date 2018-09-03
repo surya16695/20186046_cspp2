@@ -7,6 +7,7 @@ class InputValidator {
      * { var_description }.
      */
     private static final int SIX = 6;
+    // private static data;
     String data;
     InputValidator(final String data) {
         this.data = data;
@@ -16,8 +17,7 @@ class InputValidator {
      *
      * @return     { description_of_the_return_value }
      */
-    public  boolean validateData()
-    {
+    public  boolean validateData() {
         return (this.data.length() >= SIX);
     }
     /*Write the atrributes and methods for InputValidator*/
