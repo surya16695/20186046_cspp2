@@ -12,10 +12,10 @@ final class InputValidator {
     /**
      * Constructs the object.
      *
-     * @param      data  The data
+     * @param      datum  The data
      */
-    InputValidator(final String data) {
-        this.data = data;
+    InputValidator(final String datum) {
+        this.data = datum;
     }
     /**
      * { function_description }.
