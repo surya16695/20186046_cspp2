@@ -7,10 +7,13 @@ final class InputValidator {
      * { var_description }.
      */
     private static final int SIX = 6;
-    //
     // private static data;
-    //
     String data;
+    /**
+     * Constructs the object.
+     *
+     * @param      data  The data
+     */
     InputValidator(final String data) {
         this.data = data;
     }
@@ -27,7 +30,7 @@ final class InputValidator {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -39,7 +42,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
