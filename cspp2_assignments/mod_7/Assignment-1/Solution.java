@@ -1,12 +1,15 @@
-import java.util.*;
-class InputValidator
-{
+import java.util.Scanner;
+/**
+ * Class for input validator.
+ */
+class InputValidator {
     /**
-     * { var_description }
+     * { var_description }.
      */
-    String data1;
-    InputValidator(String data) {
-        this.data1 = data;
+    private static final int SIX = 6;
+    String data;
+    InputValidator(final String data) {
+        this.data = data;
     }
     /**
      * { function_description }
@@ -15,15 +18,14 @@ class InputValidator
      */
     public  boolean validateData()
     {
-        return (this.data1.length() >= 6);
+        return (this.data.length() >= SIX);
     }
     /*Write the atrributes and methods for InputValidator*/
 }
 /**
  * Class for solution.
  */
-public class Solution
-{
+public class Solution {
     /**
      * Constructs the object.
      */
@@ -31,8 +33,7 @@ public class Solution
 
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);     
