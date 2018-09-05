@@ -27,12 +27,18 @@ public class Fibonacci {
      * numbers.
      *
      * Look for the hint.txt if some of the testcases fail.
+     */
+    /**
+     * { var_description }.
+     */
+    private static final int THREE = 3;
+    /**
+     * { function_description }.
      *
      * @param      n     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      */
-    private static final int THREE = 3;
     public static List fib(final int n) {
         // todo - complete this method
         List list = new List(n);
