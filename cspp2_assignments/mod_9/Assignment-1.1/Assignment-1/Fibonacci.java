@@ -32,6 +32,7 @@ public class Fibonacci {
      *
      * @return     { description_of_the_return_value }
      */
+    private static final int THREE = 3;
     public static List fib(final int n) {
         // todo - complete this method
         List list = new List(n);
@@ -40,7 +41,7 @@ public class Fibonacci {
         int b = 1;
         list.add(b);
         int sum = 0;
-        for (int i = 3; i <= n; i++) {
+        for (int i = THREE; i <= n; i++) {
             sum = a + b;
             a = b;
             b = sum;
@@ -50,7 +51,7 @@ public class Fibonacci {
         return list;
     }
 
-	/**
+    /**
      * { function_description }.
      *
      * @param      args  The arguments
