@@ -193,7 +193,7 @@ public final class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -287,14 +287,16 @@ public final class List {
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
-    array to the end of list*/
-    public void addAll(final int items[]) {
+    /* Inserts all the elements of specified int array to the end of list */
+    /**
+    * { item_description }
+    */
+    public void addAll(final int[] items) {
         // write the logic
         if (size + items.length >= list.length) {
             resize();
         }
-        for (int i = 0;i < items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
@@ -382,7 +384,7 @@ public final class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[] = new int[t1.length];
+                int [] temp = new int[t1.length];
                 for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
                 }
@@ -413,6 +415,8 @@ public final class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default:
+                    break;
             }
         }
     }
