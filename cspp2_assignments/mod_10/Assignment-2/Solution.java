@@ -5,15 +5,14 @@ import java.util.Scanner;
  * Class for solution.
  */
 public class Solution {
-    
     /**
      * Constructs the object.
      */
     public Solution() {
-        
+
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
