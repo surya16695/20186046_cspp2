@@ -67,7 +67,7 @@ public final class List {
      * class variables with some default values.
      */
     /** 10 is Ten.*/
-    private int TEN = 10;
+    private static final int TEN = 10;
     /**
      * Constructs the object.
      */
