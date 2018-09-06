@@ -306,7 +306,7 @@ public class List {
             resize();
         }
         else {
-            System.out.println("check index value");
+            System.out.println("Negative Index Exception");
         } 
     }
     
