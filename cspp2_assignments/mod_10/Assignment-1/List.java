@@ -313,7 +313,7 @@ public final class List {
      */
     public void add(final int index, final int item) {
          // write the logic
-        if (index >= 0 && index < size) {
+        if (index >= 0) {
             for (int i = size; i > index; i--) {
                 list[i] = list[i - 1];
             }
