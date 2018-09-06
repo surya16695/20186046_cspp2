@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * { item_description }.
+ */
 public final class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -26,12 +28,10 @@ public final class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
     private int[] list;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -49,7 +49,6 @@ public final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
 
     // declare a private int size
@@ -61,8 +60,6 @@ public final class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
 
     /**
      * Constructs the object.
@@ -99,7 +96,7 @@ public final class List {
         size = 0;
         list = new int[capacity];
     }
-    
+
     /**
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -137,15 +134,12 @@ public final class List {
      * Create a method called resize(). Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
-     * 
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
      * You know enough of Object Oriented Programming to answer these questions :-)
-     *
      */
-
     //
     // todo create resize method
     //
@@ -195,8 +189,8 @@ public final class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -219,7 +213,7 @@ public final class List {
      * @return     { description_of_the_return_value }
      */
     public int get(int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -242,12 +236,12 @@ public final class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if(size == 0) {
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
@@ -279,8 +273,8 @@ public final class List {
      * @return     { description_of_the_return_value }
      */
     public int indexOf(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i])
                 return i;
         }
         return -1;
@@ -307,7 +301,7 @@ public final class List {
      /**
       Inserts the specified element at the specified index by moving all the
       elements to the right. The method returns void (nothing)
-     
+
       *@param      index  The index
       *@param      item   The item
      */
@@ -324,7 +318,7 @@ public final class List {
         }
         else {
             System.out.println("Negative Index Exception");
-        } 
+        }
     }
     /**
      * Returns the count of occurances of a given item in the list
