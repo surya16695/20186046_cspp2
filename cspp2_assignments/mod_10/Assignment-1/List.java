@@ -294,7 +294,7 @@ public final class List {
     */
     /**
     *addall function.
-    * @param  items
+    * @param  items the items.
     **/
     public void addAll(final int[] items) {
         // write the logic
@@ -329,13 +329,12 @@ public final class List {
             size++;
         } else if (list.length == size) {
             resize();
-        }
-        else {
+        }else {
             System.out.println("Negative Index Exception");
         }
     }
     /**
-     * Returns the count of occurances of a given item in the list
+     * Returns the count of occurances of a given item in the list.
      *
      * @param      item  The item
      *
@@ -375,8 +374,7 @@ public final class List {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else {
+                }else {
                     if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
