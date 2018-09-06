@@ -67,7 +67,7 @@ public final class List {
      * class variables with some default values.
      */
     /** 10 is Ten.*/
-    private int Ten = 10;
+    private int TEN = 10;
     /**
      * Constructs the object.
      */
@@ -78,7 +78,7 @@ public final class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[TEN];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -114,7 +114,7 @@ public final class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;
     }
@@ -132,24 +132,27 @@ public final class List {
      * Create a new array of the desired size,
      * and copy the contents from the original array to the new array,
      * using java.lang.System.arraycopy(...);
-     * 
      * Option 2
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize().
+     * Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object.
+     * Oriented Programming to answer these questions :-)
      */
     //
     // todo create resize method
-    //
+    /**
+    resize function.
+    */
     public void resize() {
         int capacity = 2 * list.length;
         list = Arrays.copyOf(list, capacity);
@@ -171,7 +174,7 @@ public final class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -219,7 +222,7 @@ public final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -257,11 +260,10 @@ public final class List {
         }
         return str;
     }
-    
     /**
-     * Contains return true if the list has the item passed as an argument to
-     * the method So, iterate through the list and return true if the item
-     * exists and otherwise false
+     * Contains return true if the list has the item passed as an argument to.
+     * the method So, iterate through the list and return true if the item.
+     * exists and otherwise false.
      *
      * @param      item  The item
      *
@@ -287,9 +289,10 @@ public final class List {
         }
         return -1;
     }
-    /* Inserts all the elements of specified int array to the end of list */
+    /* Inserts all the elements of specified int array to the end of list.*/
     /**
     * { item_description }
+    * @param  item
     */
     public void addAll(final int[] items) {
         // write the logic
@@ -374,7 +377,7 @@ public final class List {
                 else {
                     if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
-                        }
+                    }
                     }
                 }
                 break;
@@ -384,7 +387,7 @@ public final class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int [] temp = new int[t1.length];
+                int[] temp = new int[t1.length];
                 for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
                 }
