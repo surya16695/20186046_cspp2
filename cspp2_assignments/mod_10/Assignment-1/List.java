@@ -289,7 +289,8 @@ public final class List {
         }
         return -1;
     }
-    /* Inserts all the elements of specified int array to the end of list.
+    /*
+    *Inserts all the elements of specified int array to the end of list.
     */
     /**
     * { item_description }
