@@ -31,6 +31,9 @@ public final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    *private declaration.
+    **/
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -54,13 +57,17 @@ public final class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    size is declared.
+    */
     private int size;
 
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-
+    /** 10 is Ten.*/
+    private int Ten = 10;
     /**
      * Constructs the object.
      */
@@ -92,7 +99,7 @@ public final class List {
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -109,7 +116,7 @@ public final class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
-        list[size++] = item;   
+        list[size++] = item;
     }
 
     /*
