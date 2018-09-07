@@ -241,7 +241,7 @@ public class List {
         }
         List li = new List();
         int count = 0;
-        for (int i = start; i < end; i++) {
+        for (int i = start; i < end - 1; i++) {
             li.add(list[i]);
             size++;
         }
