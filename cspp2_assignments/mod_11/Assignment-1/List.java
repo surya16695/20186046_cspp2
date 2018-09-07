@@ -248,9 +248,9 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    List lis = new List();
     public boolean equals(List lis ) {
     // Replace the code below
+        // List lis = new List();
         int count = 0;
         for (int i = 0; i < lis.size(); i++) {
                 if (contains(lis.get(i))) {
