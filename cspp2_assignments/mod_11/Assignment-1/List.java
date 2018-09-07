@@ -127,9 +127,10 @@ public class List {
                 list[i] = list[i + 1];
             }
             size--;
-        } else {
-            System.out.println("Invalid Position Exception");
-        }
+        } 
+        // else {
+        //     System.out.println("Invalid Position Exception");
+        // }
     }
 
     /*
@@ -219,7 +220,9 @@ public class List {
      public void removeAll(int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
-            remove(indexOf(newArray[i]));
+            for (int j = 0; j < list.length; j++) {
+                remove(indexOf(newArray[i]));
+            }
         }
     }
 
