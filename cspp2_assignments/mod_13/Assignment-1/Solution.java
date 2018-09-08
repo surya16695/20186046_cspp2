@@ -142,7 +142,7 @@ class Set {
     public Set intersection(final Set newArray) {
     	Set sot = new Set();
     	int count = 0;
-    	for (int i = 0; i < newArray.size(); i++) {
+    	for (int i = 0; i < size(); i++) {
 			if(newArray.contains(get(i))) {
 				int temp = (get(i));
                 sot.add(temp);  
