@@ -153,6 +153,13 @@ class Set {
     	}
     	return sot;
     }
+    /**
+     * { function_description }
+     *
+     * @param      newArray  The new array
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Set retainAll(final int[] newArray) {
         Set sot = new Set();
         int count = 0;
@@ -160,10 +167,10 @@ class Set {
             for (int j = 0; j < size(); j++) {
                 if (newArray[i] == get(j)) {
                     int temp = (get(j));
+                    System.out.println(temp);
                     sot.add(temp);  
                 }                
             }
-    
         }
         if (sot.size == 0) {
             return sot;
