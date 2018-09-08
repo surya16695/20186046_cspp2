@@ -176,14 +176,15 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public int[][] cartesianProduct(final Set t) {
-    	int[][] a;
-        for (int i = 0; i < size(); i++) {
+        int[][] a = new int[size()][t.size()];
+        for (int i: set) {
             for (int j = 0; j < t.size(); j++) {
-                // a.deepToString(i, j);
+                a[i][j] = t.get(indexOf(j));
             }
-            
+        }if (size() == 0 || t.size() == 0) {
+            return a;
         }
-        return null;
+        return a;
     }
 }
 /**
