@@ -76,7 +76,7 @@ class Set {
         if (size == 0) {
             return "{}";
         }
-        String s = "{ ";
+        String s = "{";
         int i;
         for (i = 0; i < size - 1; i++) {
             s += set[i] + ", ";
@@ -149,7 +149,6 @@ class Set {
 			}
     	}if (sot.size == 0) {
     		System.out.println("{}");
-    		return null;
     	}
     	return sot;
     }
