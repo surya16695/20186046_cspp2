@@ -147,8 +147,9 @@ class Set {
 				int temp = (get(indexOf(newArray.get(i))));
 				sot.add(temp); 
 			}
-    	}if (sot.size == 0) {
-    		System.out.println("{}");
+    	}
+    	if (sot.size == 0) {
+    		return sot;
     	}
     	return sot;
     }
