@@ -161,18 +161,12 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public Set retainAll(final int[] newArray) {
-        Set sot = new Set();
+        Set dot = new Set();
         // int count = 0;
         for (int i = 0; i < newArray.length; i++) {
-            if (contains(newArray[i])) {
-                int temp = (get(indexOf(newArray[i])));
-                sot.add(temp);  
-            }
+            dot.add(newArray[i]);
         }
-        if (sot.size == 0) {
-            return sot;
-        }
-        return sot;
+        return intersection(dot);
     }
     /**
      * { function_description }
