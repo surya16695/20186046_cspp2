@@ -76,12 +76,12 @@ class Set {
         if (size == 0) {
             return "{}";
         }
-        String s = "{";
+        String s = "{ ";
         int i;
         for (i = 0; i < size - 1; i++) {
-            s += set[i] + ",";
+            s += set[i] + ", ";
         }
-        s += set[i] + "}";
+        s += set[i] + " }";
         return s;
     }
     /**
