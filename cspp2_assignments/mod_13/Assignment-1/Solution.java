@@ -162,14 +162,11 @@ class Set {
      */
     public Set retainAll(final int[] newArray) {
         Set sot = new Set();
-        int count = 0;
+        // int count = 0;
         for (int i = 0; i < newArray.length; i++) {
-            for (int j = 0; j < size(); j++) {
-                if (get(j) == newArray[i]) {
-                    int temp = (get(j));
-                    // System.out.println(temp);
-                    sot.add(temp);  
-                }                
+            if (contains(newArray[i])) {
+                int temp = (get(indexOf(newArray[i])));
+                sot.add(temp);  
             }
         }
         if (sot.size == 0) {
@@ -177,8 +174,22 @@ class Set {
         }
         return sot;
     }
+    /**
+     * { function_description }
+     *
+     * @param      t     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int[][] cartesianProduct(final Set t) {
-    	return null;
+    	int[][] a;
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < t.size(); j++) {
+                // a.deepToString(i, j);
+            }
+            
+        }
+        return null;
     }
 }
 /**
