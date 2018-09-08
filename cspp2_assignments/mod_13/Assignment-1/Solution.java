@@ -154,7 +154,18 @@ class Set {
     	return sot;
     }
     public Set retainAll(final int[] newArray) {
-    	return null;
+        Set sot = new Set();
+        int count = 0;
+        for (int i = 0; i < size(); i++) {
+            if(newArray[i] == (get(i))) {
+                int temp = (get(i));
+                sot.add(temp);  
+            }
+        }
+        if (sot.size == 0) {
+            return sot;
+        }
+        return sot;
     }
     public int[][] cartesianProduct(final Set t) {
     	return null;
