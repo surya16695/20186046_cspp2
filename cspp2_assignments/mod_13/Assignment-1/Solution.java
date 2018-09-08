@@ -165,9 +165,9 @@ class Set {
         int count = 0;
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size(); j++) {
-                if (newArray[i] == get(j)) {
+                if (get(j) == newArray[i]) {
                     int temp = (get(j));
-                    System.out.println(temp);
+                    // System.out.println(temp);
                     sot.add(temp);  
                 }                
             }
