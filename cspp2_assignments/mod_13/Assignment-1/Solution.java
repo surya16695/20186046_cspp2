@@ -81,7 +81,7 @@ class Set {
         for (i = 0; i < size - 1; i++) {
             s += set[i] + ", ";
         }
-        s += set[i] + " }";
+        s += set[i] + "}";
         return s;
     }
     /**
@@ -148,6 +148,7 @@ class Set {
 				sot.add(temp); 
 			}
     	}if (sot.size == 0) {
+    		System.out.println("{}");
     		return null;
     	}
     	return sot;
