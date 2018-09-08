@@ -114,9 +114,9 @@ class Set {
         //     resize();
         // }
         for (int i = 0; i < newArray.length; i++) {
-        	if (contains(newArray[i]) == false) {
-            	add(newArray[i]);
-        	}
+            if (contains(newArray[i]) == false) {
+                add(newArray[i]);
+            }
         }
     }
     /**
@@ -136,25 +136,25 @@ class Set {
         return -1;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      newArray  The new array
      *
      * @return     { description_of_the_return_value }
      */
     public Set intersection(final Set newArray) {
-    	Set sot = new Set();
-    	int count = 0;
-    	for (int i = 0; i < size(); i++) {
-			if (newArray.contains(get(i))) {
-				int temp = (get(i));
+        Set sot = new Set();
+        int count = 0;
+        for (int i = 0; i < size(); i++) {
+            if (newArray.contains(get(i))) {
+                int temp = (get(i));
                 sot.add(temp);
-    	    }
+            }
         }
-    	if (sot.size == 0) {
-    		return sot;
-    	}
-    	return sot;
+        if (sot.size == 0) {
+            return sot;
+        }
+        return sot;
     }
     /**
      * { function_description }.
