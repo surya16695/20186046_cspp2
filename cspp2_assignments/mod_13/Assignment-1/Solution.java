@@ -114,7 +114,7 @@ class Set {
         //     resize();
         // }
         for (int i = 0; i < newArray.length; i++) {
-            if (contains(newArray[i]) == false) {
+            if (!contains(newArray[i])) {
                 add(newArray[i]);
             }
         }
