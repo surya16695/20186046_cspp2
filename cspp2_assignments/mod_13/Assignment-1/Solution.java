@@ -143,8 +143,8 @@ class Set {
     	Set sot = new Set();
     	int count = 0;
     	for (int i = 0; i < newArray.size(); i++) {
-			if(contains(newArray.get(i))) {
-				int temp = (get(indexOf(newArray.get(i))));
+			if(newArray.contains(get(i))) {
+				int temp = (get(i));
                 sot.add(temp);  
     	    }
         }
@@ -159,7 +159,6 @@ class Set {
     public int[][] cartesianProduct(final Set t) {
     	return null;
     }
-
 }
 /**
  * Solution class for code-eval.
