@@ -115,7 +115,7 @@ class Set {
         // }
         for (int i = 0; i < newArray.length; i++) {
         	if (contains(newArray[i]) == false) {
-            	add(newArray[i]);	
+            	add(newArray[i]);
         	}
         }
     }
@@ -146,7 +146,7 @@ class Set {
     	Set sot = new Set();
     	int count = 0;
     	for (int i = 0; i < size(); i++) {
-			if(newArray.contains(get(i))) {
+			if (newArray.contains(get(i))) {
 				int temp = (get(i));
                 sot.add(temp);  
     	    }
@@ -157,7 +157,7 @@ class Set {
     	return sot;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      newArray  The new array
      *
@@ -172,7 +172,7 @@ class Set {
         return intersection(dot);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      t     { parameter_description }
      *
@@ -184,7 +184,7 @@ class Set {
             for (int j = 0; j < t.size(); j++) {
                 a[i][j] = t.get(indexOf(j));
             }
-        }if (size() == 0 || t.size() == 0) {
+        } if (size() == 0 || t.size() == 0) {
             return a;
         }
         return a;
