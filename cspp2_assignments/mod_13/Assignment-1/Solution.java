@@ -111,9 +111,9 @@ class Set {
         //     resize();
         // }
         for (int i = 0; i < newArray.length; i++) {
-        	if (contains(newArray[i]) == false) {
-            	add(newArray[i]);	
-        	}
+            if (contains(newArray[i]) == false) {
+                add(newArray[i]);   
+            }
         }
     }
     /**
@@ -140,26 +140,28 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public Set intersection(final Set newArray) {
-    	Set sot = new Set();
-    	int count = 0;
-    	for (int i = 0; i < newArray.size(); i++) {
-			if(contains(newArray.get(i))) {
-				int temp = (get(indexOf(newArray.get(i))));
-				if (indexOf(temp) < indexOf(newArray.get(i +1))) {
-					sot.add(temp);	
-				}
-			}
-    	}
-    	if (sot.size == 0) {
-    		return sot;
-    	}
-    	return sot;
+        Set sot = new Set();
+        int count = 0;
+        for (int i = 0; i < newArray.size(); i++) {
+            if(contains(newArray.get(i))) {
+                int temp = (get(indexOf(newArray.get(i))));
+                while(newArray.size() == sot.size()) {
+                if (indexOf(temp) < indexOf(newArray.get(i +1))) {
+                    sot.add(temp);  
+                    }
+                }
+            }
+        }
+        if (sot.size == 0) {
+            return sot;
+        }
+        return sot;
     }
     public Set retainAll(final int[] newArray) {
-    	return null;
+        return null;
     }
     public int[][] cartesianProduct(final Set t) {
-    	return null;
+        return null;
     }
 
 }
