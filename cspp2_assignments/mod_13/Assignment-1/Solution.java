@@ -10,13 +10,16 @@ class Set {
     //
     // your code goes here... Good luck :-)
     //
+    /**
+    final int declaration.
+    **/
     private static final int TEN = 10;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int[] set;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int size;
     /**
@@ -27,7 +30,7 @@ class Set {
         size = 0;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      */
@@ -39,7 +42,7 @@ class Set {
         set[size++] = item;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -47,7 +50,7 @@ class Set {
         return size;
     }
     /**
-     * { function_description }
+     * { function_description }.
      */
     public void resize() {
         set = Arrays.copyOf(set, 2 * size);
@@ -57,7 +60,7 @@ class Set {
      *
      * @param      index  The index
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
@@ -282,3 +285,5 @@ public final class Solution {
         }
     }
 }
+
+
