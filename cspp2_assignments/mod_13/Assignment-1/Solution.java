@@ -145,7 +145,7 @@ class Set {
     	for (int i = 0; i < newArray.size(); i++) {
 			if(contains(newArray.get(i))) {
 				int temp = (get(indexOf(newArray.get(i))));
-				if (indexOf(newArray.get(i + 1)) > indexOf(newArray.get(i))) {
+				if (indexOf(temp) < indexOf(newArray.get(i +1))) {
 					sot.add(temp);	
 				}
 			}
