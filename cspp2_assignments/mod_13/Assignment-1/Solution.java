@@ -56,7 +56,7 @@ class Set {
         set = Arrays.copyOf(set, 2 * size);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      *
@@ -88,7 +88,7 @@ class Set {
         return s;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
@@ -105,7 +105,7 @@ class Set {
         return false;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      newArray  The new array
      */
@@ -148,7 +148,7 @@ class Set {
     	for (int i = 0; i < size(); i++) {
 			if (newArray.contains(get(i))) {
 				int temp = (get(i));
-                sot.add(temp);  
+                sot.add(temp);
     	    }
         }
     	if (sot.size == 0) {
