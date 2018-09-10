@@ -131,6 +131,34 @@ class Set {
         return set[index];
     }
     /**
+     * { function_description }.
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set subSet(final int start, final int end) {
+        Set l = new Set();
+        if (start <= 0 || end <= 0) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        if (start > size || end > size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        if (start > end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        } else {
+            for (int i = start; i < end; i++) {
+                    l.add(set[i]);
+            }
+            return l;
+        }
+    }
+    /**
      * Searches for the first match.
      *
      * @param      item  The item
