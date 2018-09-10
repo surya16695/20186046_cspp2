@@ -113,13 +113,22 @@ class Set {
      */
     public void addAll(final int[] newArray) {
         Arrays.sort(newArray);
-        Set s = new Set(); 
         for (int i = 0; i < newArray.length; i++) {
             if (!contains(newArray[i])) {
-               s.add(newArray[i]);
+               add(newArray[i]);
             }
         }
-        System.out.println(s);
+        // System.out.println(s);
+    }
+    /**
+     * { function_description }
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int last(int index) {
+        return set[index];
     }
     /**
      * Searches for the first match.
