@@ -110,6 +110,7 @@ class Set {
      * @param      newArray  The new array
      */
     public void addAll(final int[] newArray) {
+        Arrays.sort(newArray);
         if (size + newArray.length >= set.length) {
             resize();
         }
@@ -118,7 +119,6 @@ class Set {
                 add(newArray[i]);
             }
         }
-        // Arrays.sort(set);
     }
     /**
      * Searches for the first match.
