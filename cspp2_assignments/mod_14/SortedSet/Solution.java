@@ -113,12 +113,12 @@ class Set {
      */
     public void addAll(final int[] newArray) {
         Arrays.sort(newArray);
+        Set s = new Set(); 
         for (int i = 0; i < newArray.length; i++) {
             if (!contains(newArray[i])) {
-                add(newArray[i]);
+               s.add(newArray[i]);
             }
         }
-        Arrays.sort(set);
     }
     /**
      * Searches for the first match.
