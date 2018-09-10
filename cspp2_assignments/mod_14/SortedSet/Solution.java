@@ -4,167 +4,182 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : Surya.
+ * @author     : Surya
  */
-class SortedSet {
-    // your code goes here... Good luck :-) Thanks.
+class Set {
+    //
+    // your code goes here... Good luck :-)
+    //
     /**
-     * set array.
+    final int declaration.
+    **/
+    private static final int TEN = 10;
+    /**
+     * { var_description }.
      */
     private int[] set;
     /**
-     * size variable.
+     * { var_description }.
      */
     private int size;
-
     /**
      * Constructs the object.
      */
-    SortedSet() {
-        set = new int[2];
+    Set() {
+        set = new int[TEN];
         size = 0;
-        sort();
     }
     /**
-     * return number of elements in Set.
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
+    public void add(final int item) {
+        //Inserts the specified element at the end of the list.
+        if (size >= set.length) {
+            resize();
+        }
+        set[size++] = item;
+        Arrays.sort(set);
+    }
+    /**
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
     public int size() {
         return size;
     }
-
     /**
-     * returns true if element is in Set.
-     * otherwise false.
-     *
-     * @param      element  The element
-     *
-     * @return     { description_of_the_return_value }
+     * { function_description }.
      */
-    public boolean contains(final int element) {
-        for (int setElement : set) {
-            if (setElement == element) {
-                return true;
-            }
-        }
-        return false;
+    public void resize() {
+        set = Arrays.copyOf(set, 2 * size);
     }
-
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }.
+     */
+    public int get(final int index) {
+        // Replace the code below to write the code for get
+        if (index >= 0 && index < size) {
+            return set[index];
+        }
+        return -1;
+    }
     /**
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
      */
     public String toString() {
+        // Replace the code below
         if (size == 0) {
             return "{}";
         }
-        StringBuffer sb = new StringBuffer("{");
+        String s = "{";
         int i;
         for (i = 0; i < size - 1; i++) {
-            sb.append(set[i] + ", ");
+            s += set[i] + ", ";
         }
-        sb.append(set[i]);
-        sb.append("}");
-        return sb.toString();
-    }
-
-    /**
-     * adds element to the end of the Set.
-     *
-     * @param      element  The element
-     */
-    public void add(final int element) {
-        if (size == set.length) {
-            resize();
-        }
-        if (!contains(element)) {
-            set[size++] = element;
-        }
-    }
-
-    /**
-     * resizes the Set object with double size.
-     */
-    private void resize() {
-        set = Arrays.copyOf(set, 2 * size);
+        s += set[i] + "}";
+        return s;
     }
     /**
      * { function_description }.
      *
-     * @param      a     { parameter_description }
-     */
-    public void sort() {
-        Arrays.sort(set);
-
-    }
-    /**
-     * add all elements to Set
-     * in the given array.
-     *
-     * @param      elements  The elements
-     */
-    public void add(final int[] elements) {
-        sort();
-        for (int element : elements) {
-            add(element);
-        }
-    }
-
-    /**
-     * return element at given index.
-     *
-     * @param      index  The index
+     * @param      item  The item
      *
      * @return     { description_of_the_return_value }
      */
-    private int get(final int index) {
-        return set[index];
-    }
-
-    /**
-     * return common elements in both Sets.
-     *
-     * @param      that  The that
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public SortedSet intersection(final SortedSet that) {
-        if (that.size() == 0 || this.size() == 0) {
-            return new SortedSet();
-        }
-        SortedSet newSet = new SortedSet();
-        for (int i = 0; i < this.size(); i++) {
-            if (that.contains(this.set[i])) {
-                newSet.add(this.set[i]);
+    public boolean contains(final int item) {
+        // Replace the code below
+        // return indexOf(item) != -1;
+        for (int i = 0; i < size; i++) {
+            if (item == set[i]) {
+                return true;
             }
         }
-        return newSet;
+        return false;
     }
-
     /**
-     * return Set object with element in the given argument
-     * elements.
+     * { function_description }.
      *
-     * @param      elements  The elements
+     * @param      newArray  The new array
+     */
+    public void addAll(final int[] newArray) {
+        // if (size + newArray.length >= list.length) {
+        //     resize();
+        // }
+        for (int i = 0; i < newArray.length; i++) {
+            if (!contains(newArray[i])) {
+                add(newArray[i]);
+            }
+        }
+    }
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
      *
      * @return     { description_of_the_return_value }
      */
-    public SortedSet retainAll(final int[] elements) {
-        SortedSet newSet = new SortedSet();
-        newSet.add(elements);
-        return this.intersection(newSet);
+    public int indexOf(final int item) {
+        // Replace the code below
+        for (int i = 0; i < size; i++) {
+            if (set[i] == item) {
+                return i;
+            }
+        }
+        return -1;
     }
-
     /**
-     * return 2d array of cartesian product.
+     * { function_description }.
      *
-     * @param      that  The that
+     * @param      newArray  The new array
      *
      * @return     { description_of_the_return_value }
      */
-    public int[][] cartesianProduct(final SortedSet that) {
+    public Set intersection(final Set newArray) {
+        Set sot = new Set();
+        int count = 0;
+        for (int i = 0; i < size(); i++) {
+            if (newArray.contains(get(i))) {
+                int temp = (get(i));
+                sot.add(temp);
+            }
+        }
+        if (sot.size == 0) {
+            return sot;
+        }
+        return sot;
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      newArray  The new array
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set retainAll(final int[] newArray) {
+        Set dot = new Set();
+        // int count = 0;
+        for (int i = 0; i < newArray.length; i++) {
+            dot.add(newArray[i]);
+        }
+        return intersection(dot);
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      t     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[][] cartesianProduct(final Set that) {
         if (that.size() == 0 || this.size() == 0) {
           return null;
         }
@@ -178,35 +193,6 @@ class SortedSet {
         }
         return cartesianProduct;
     }
-    /**
-     * subSet.
-     *
-     * @param      start  The start
-     * @param      end    The end
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public SortedSet subSet(final int start, final int end) {
-        SortedSet l = new SortedSet();
-        if (start <= 0 || end <= 0) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        }
-        if (start > size || end > size) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        }
-        if (start > end) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        } else {
-            for (int i = start; i < end; i++) {
-                    l.add(set[i]);
-            }
-            return l;
-        }
-    }
-
 }
 /**
  * Solution class for code-eval.
@@ -244,7 +230,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         // instantiate this set
-        SortedSet s = new SortedSet();
+        Set s = new Set();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -264,37 +250,37 @@ public final class Solution {
                 case "print":
                 System.out.println(s);
                 break;
-                case "addAll":
+                case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
                 } else {
-                    s.add(intArray);
+                    s.addAll(intArray);
                 }
                 break;
                 case "intersection":
-                s = new SortedSet();
-                SortedSet t = new SortedSet();
+                s = new Set();
+                Set t = new Set();
                 intArray = intArray(tokens[1]);
-                s.add(intArray);
+                s.addAll(intArray);
                 intArray = intArray(tokens[2]);
-                t.add(intArray);
+                t.addAll(intArray);
                 System.out.println(s.intersection(t));
                 break;
                 case "retainAll":
-                s = new SortedSet();
+                s = new Set();
                 intArray = intArray(tokens[1]);
-                s.add(intArray);
+                s.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
                 case "cartesianProduct":
-                s = new SortedSet();
-                t = new SortedSet();
+                s = new Set();
+                t = new Set();
                 intArray = intArray(tokens[1]);
-                s.add(intArray);
+                s.addAll(intArray);
                 intArray = intArray(tokens[2]);
-                t.add(intArray);
+                t.addAll(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
                 default:
@@ -303,3 +289,4 @@ public final class Solution {
         }
     }
 }
+
