@@ -118,7 +118,7 @@ class Set {
                 add(newArray[i]);
             }
         }
-        // Arrays.sort(set);
+        Arrays.sort(set);
     }
     /**
      * Searches for the first match.
