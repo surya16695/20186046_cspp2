@@ -40,7 +40,6 @@ class Set {
             resize();
         }
         set[size++] = item;
-        Arrays.sort(set);
     }
     /**
      * { function_description }.
@@ -119,6 +118,7 @@ class Set {
                 add(newArray[i]);
             }
         }
+        Arrays.sort(set);
     }
     /**
      * Searches for the first match.
