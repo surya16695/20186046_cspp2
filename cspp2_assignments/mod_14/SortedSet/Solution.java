@@ -110,9 +110,9 @@ class Set {
      * @param      newArray  The new array
      */
     public void addAll(final int[] newArray) {
-        // if (size + newArray.length >= list.length) {
-        //     resize();
-        // }
+        if (size + newArray.length >= set.length) {
+            resize();
+        }
         for (int i = 0; i < newArray.length; i++) {
             if (!contains(newArray[i])) {
                 add(newArray[i]);
