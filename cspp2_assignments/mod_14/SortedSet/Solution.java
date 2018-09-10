@@ -140,23 +140,33 @@ class Set {
      */
     public Set subSet(final int start, final int end) {
         Set l = new Set();
-        if (start <= 0 || end <= 0) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        }
-        if (start > size || end > size) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        }
+        // if (start <= 0 || end <= 0) {
+        //     System.out.println("Index Out of Bounds Exception");
+        //     return null;
+        // }
+        // if (start > size || end > size) {
+        //     System.out.println("Index Out of Bounds Exception");
+        //     return null;
+        // }
         if (start > end) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        } else {
-            for (int i = start; i < end; i++) {
-                    l.add(set[i]);
-            }
+            System.out.println("Invalid Arguments to Subset Exception");
             return l;
+        } 
+        // while(true) {
+        //     if (!contains(end)) {
+        //         int b = end - 1;
+        //     }
+        //     else {
+        //         // b = end;
+        //         break;
+        //     }
+        for (int i = 0; i < size; i++) {
+            if(set[i] >= start && set[i] <= end) {
+
+                l.add(set[i]);
+            }
         }
+        return l;
     }
     /**
      * Searches for the first match.
