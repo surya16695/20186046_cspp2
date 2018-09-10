@@ -119,6 +119,7 @@ class Set {
                s.add(newArray[i]);
             }
         }
+        System.out.println(s);
     }
     /**
      * Searches for the first match.
