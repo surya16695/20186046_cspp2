@@ -39,7 +39,9 @@ class Set {
         if (size >= set.length) {
             resize();
         }
-        set[size++] = item;
+        if (!contains(item)) {
+            set[size++] = item;
+        }
     }
     /**
      * { function_description }.
@@ -111,9 +113,6 @@ class Set {
      */
     public void addAll(final int[] newArray) {
         Arrays.sort(newArray);
-        if (size + newArray.length >= set.length) {
-            resize();
-        }
         for (int i = 0; i < newArray.length; i++) {
             if (!contains(newArray[i])) {
                 add(newArray[i]);
