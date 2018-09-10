@@ -312,6 +312,17 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
+                case "subSet":
+                    if (tokens.length != 2) {
+                        break;
+                    }
+                    String[] arrstring3 = tokens[1].split(",");
+                    Set object = s.subSet(Integer.parseInt(arrstring3[0]),
+                            Integer.parseInt(arrstring3[1]));
+                    if (object != null) {
+                        System.out.println(object);
+                    }
+                    break;
                 case "cartesianProduct":
                 s = new Set();
                 t = new Set();
