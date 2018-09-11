@@ -115,7 +115,10 @@ class Set {
      *
      * @return     { Set object }.
      */
-    public Set subSet(final int fromElement, final int toElement) {
+    public Set subSet(final int fromElement, final int toElement) throws Exception {
+    	if (fromElement > toElement) {
+    		throw new Exception("Invalid Arguments to Subset Exception");
+    	}
         Set sa = new Set();
         final int ten = 10;
         int j = 0;
@@ -254,19 +257,19 @@ public final class Solution {
                 s.addAll(intArray);
                 break;
             case "subSet":
-                int[] intArray1 = intArray(tokens[1]);
-                int fromElement = intArray1[0];
-                int toElement = intArray1[1];
-                if (fromElement > toElement) {
-                    System.out.println("Invalid Arguments to Subset Exception");
-                } else {
+            	try {
+	                int[] intArray1 = intArray(tokens[1]);
+	                int fromElement = intArray1[0];
+	                int toElement = intArray1[1];
                     Set sa = new Set();
                     sa = s.subSet(fromElement, toElement);
                     System.out.println(sa);
+                } catch (Exception e) {
+                	System.out.println(e.getMessage());
                 }
                 break;
             case "headSet":
-                toElement = Integer.parseInt(tokens[1]);
+                int toElement = Integer.parseInt(tokens[1]);
                 Set sa = new Set();
                 sa = s.headSet(toElement);
                 System.out.println(sa);
