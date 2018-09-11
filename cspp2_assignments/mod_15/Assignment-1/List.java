@@ -376,6 +376,7 @@ public final class List {
             for (int i = n; i < n2; i++) {
                     l.add(list[i]);
             }
+            System.out.println(l);
             return l;
         }
     }
