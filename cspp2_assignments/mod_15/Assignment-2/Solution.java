@@ -230,6 +230,7 @@ class Set {
         }
         return intersection(other);
     }
+
     /**
      * { Last }.
      *
