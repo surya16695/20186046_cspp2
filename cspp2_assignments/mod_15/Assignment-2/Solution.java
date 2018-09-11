@@ -186,6 +186,20 @@ class Set {
         return sa;
     }
     /**
+     * { function_description }.
+     *
+     * @param      arr   The arr
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public SortedSet retainAll(final int[] arr) {
+        SortedSet other = new SortedSet();
+        for (int item : arr) {
+            other.add(item);
+        }
+        return other;
+    }
+    /**
      * { Last }.
      *
      * @return     { Integer }.
@@ -257,6 +271,12 @@ public final class Solution {
             case "addAll":
                 int[] intArray = intArray(tokens[1]);
                 s.addAll(intArray);
+                break;
+            case "retainAll":
+                intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
                 break;
             case "subSet":
             	try {
