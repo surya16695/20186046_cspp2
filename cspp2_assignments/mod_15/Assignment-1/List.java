@@ -477,6 +477,7 @@ public final class List {
                         System.out.println(e.getMessage());
                     }                 
                 }
+                break;
                 case "indexOf":
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
