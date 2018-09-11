@@ -190,10 +190,9 @@ class Set {
      *
      * @return     { Integer }.
      */
-    public int last() {
+    public int last() throws Exception {
         if (size == 0) {
-            System.out.println("Set Empty Exception");
-            return -1;
+            throw new Exception("Set Empty Exception");
         } else {
             return set[size - 1];
         }
@@ -282,7 +281,11 @@ public final class Solution {
             	}
                 break;
             case "last":
+            	try {
                 System.out.println(s.last());
+            	} catch (Exception e) {
+            		System.out.println(e.getMessage());
+            	}
                 break;
             default:
                 break;
