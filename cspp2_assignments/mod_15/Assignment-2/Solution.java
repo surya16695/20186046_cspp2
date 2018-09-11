@@ -211,7 +211,9 @@ class Set {
         Set result = new Set();
         for (int i = 0; i < this.size; i++) {
             if (other.contains(this.get(i))) {
+            	System.out.println();
                 result.add(other.get(i));
+                System.out.println(other.get(i));
             }
         }
         return result;
