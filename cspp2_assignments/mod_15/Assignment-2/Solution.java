@@ -188,16 +188,47 @@ class Set {
     /**
      * { function_description }.
      *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int get(final int index) {
+        if (index < 0 || index >= this.size()) {
+            return -1;
+        } else {
+            return set[index];
+        }
+    }
+
+    /**
+     * { function_description }.
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set intersection(Set other) {
+        Set result = new Set();
+        for (int i = 0; i < this.size; i++) {
+            if (other.contains(this.get(i))) {
+                result.add(other.get(i));
+            }
+        }
+        return result;
+    }
+    /**
+     * { function_description }.
+     *
      * @param      arr   The arr
      *
      * @return     { description_of_the_return_value }
      */
-    public SortedSet retainAll(final int[] arr) {
-        SortedSet other = new SortedSet();
+    public Set retainAll(final int[] arr) {
+        Set other = new Set();
         for (int item : arr) {
             other.add(item);
         }
-        return other;
+        return intersection(other);
     }
     /**
      * { Last }.
