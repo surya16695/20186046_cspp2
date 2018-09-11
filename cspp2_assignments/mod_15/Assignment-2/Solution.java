@@ -161,7 +161,7 @@ class Set {
      *
      * @return     { Set object }.
      */
-    public Set headSet(final int toElement) {
+    public Set headSet(final int toElement) throws Exception {
         Set sa = new Set();
         final int ten = 10;
         int j = 0;
@@ -180,6 +180,9 @@ class Set {
         Arrays.sort(sub);
         sa.set = sub.clone();
         sa.size = j;
+        if (sa.size() == 0) {
+        	throw new Exception("Set Empty Exception");
+        }
         return sa;
     }
     /**
@@ -269,10 +272,14 @@ public final class Solution {
                 }
                 break;
             case "headSet":
+            	try {
                 int toElement = Integer.parseInt(tokens[1]);
                 Set sa = new Set();
                 sa = s.headSet(toElement);
                 System.out.println(sa);
+            	} catch (Exception e) {
+            		System.out.println(e.getMessage());
+            	}
                 break;
             case "last":
                 System.out.println(s.last());
