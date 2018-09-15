@@ -107,6 +107,9 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        if (size == 0) {
+                        
+        }
         for (int i = 0; i < answerCount; i++) {
             System.out.println(quText[i]+"("+qiCorrect[i]+")");
             System.out.println(qChoice[i]);
@@ -126,7 +129,7 @@ public final class Solution {
         int sum = 0;
         for (int i = 0; i < size; i++) {
             System.out.println(quText[i]);
-            if (Integer.parseInt(quResponse[i]) == Integer.parseInt(qiCorrect[i])) {
+            if (Integer.parseInt(quResponse[i]) != Integer.parseInt(qiCorrect[i])) {
                 System.out.println(" Correct Answer! - Marks Awarded:"+qzMax[i]);
                 sum = sum + (Integer.parseInt(qzMax[i]));
             } else {
