@@ -2,10 +2,10 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 class Quiz {
-    private String [] qu;
+    private String [] quizs;
     private int size;
     public Quiz() {
-        qu = new String[10];
+        quizs = new String[10];
         size = 0;  
     }
 }
@@ -60,11 +60,7 @@ public final class Solution {
             }
         }
     }
-    // public static void add(String[] tokens) {
-    //     // String[] qu = new String[10];
-    //     // int size = 0;
-    //     qu[size++] = tokens;
-    // }
+
     /**
      * Loads questions.
      *
@@ -72,29 +68,29 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
+    public static String[] qu = new String[10];
+    public static String[] q = new String[10];
+    public static int size = 0;
     public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class.
         String line = s.nextLine();
-        String[] qu = new String[10];
-        String[] q = new String[10];
-        int size = 0;
+        Quiz qui = new Quiz();
         System.out.println(questionCount+"are added to the quiz");
         for (int i = 0; i < questionCount; i++) {
             String[] tokens = line.split(":");
             qu[i] = (tokens[0]);
+            // quizs.add(qu[i]);
             q[i] = tokens[1].replace(",","    ");
             q[i].split(",");
-
-            System.out.println(qu[i]);
-            System.out.println(q[i]);
-            // System.out.println(Arrays.toString(tokens[1]));
-
+            // qui.add(q[i]);
+            size++;
+            // System.out.println(qu[i]);
+            // System.out.println(q[i]);
         }
     }
             
-
 
     /**
      * Starts a quiz.
@@ -107,6 +103,10 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        for (int i = 0; i < answerCount; i++) {
+            System.out.println(qu[i]);
+            System.out.println(q[i]);
+        }
     }
 
     /**
