@@ -4,9 +4,9 @@ import java.util.Arrays;
 class Quiz {
     private String [] qu;
     private int size;
-    protected Quiz() {
-        String[] qu = new String[10];
-        int size = 0;  
+    public Quiz() {
+        qu = new String[10];
+        size = 0;  
     }
 }
 /**
@@ -61,8 +61,8 @@ public final class Solution {
         }
     }
     // public static void add(String[] tokens) {
-    //     String[] qu = new String[10];
-    //     int size = 0;
+    //     // String[] qu = new String[10];
+    //     // int size = 0;
     //     qu[size++] = tokens;
     // }
     /**
@@ -78,10 +78,12 @@ public final class Solution {
         // add the question objects to the quiz class.
         String line = s.nextLine();
         String[] qu = new String[10];
+        int size = 0;
         System.out.println(questionCount+"are added to the quiz");
         for (int i = 0; i < questionCount; i++) {
             String[] tokens = line.split(":");
-            qu[i] += tokens;
+            qu[i] = (tokens[0]);
+
             System.out.println(qu[i]);
             // System.out.println(Arrays.toString(tokens[1]));
 
