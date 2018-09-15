@@ -2,8 +2,8 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 class Quiz {
-    private String [] quizs;
-    private int size;
+    String [] quizs;
+    int size;
     public Quiz() {
         quizs = new String[10];
         size = 0;  
@@ -80,13 +80,13 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class.
         Quiz qui = new Quiz();
+        System.out.println(questionCount+"are added to the quiz");
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String[] tokens = line.split(":");
             if (tokens.length != 5) {
                 System.out.println("Error! Malformed question");
             } else {
-                System.out.println(questionCount+"are added to the quiz");
                 quText[i] = (tokens[0]);
                 qChoice[i] = tokens[1].replace(",","    ");
                 qChoice[i].split(",");
@@ -95,6 +95,8 @@ public final class Solution {
                 negative[i] = tokens[4];
                 // System.out.println(qi[i]);
                 size++;
+            } if (size == 0) {
+                System.out.println("Quiz does not have questions");           
             }
         }
     }
@@ -111,17 +113,13 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if (size == 0) {
-            System.out.println("Quiz does not have questions");           
-        } else {
-            for (int i = 0; i < answerCount; i++) {
-                System.out.println(quText[i]+"("+qzMax[i]+")");
-                System.out.println(qChoice[i]);
-                String line = s.nextLine();
-                String[] tokens = line.split(" ");
-                quChoice[i] = (tokens[0]);
-                quResponse[i] = (tokens[1]);
-            }
+        for (int i = 0; i < answerCount; i++) {
+            System.out.println(quText[i]+"("+qzMax[i]+")");
+            System.out.println(qChoice[i]);
+            String line = s.nextLine();
+            String[] tokens = line.split(" ");
+            quChoice[i] = (tokens[0]);
+            quResponse[i] = (tokens[1]);
         }
     }
     /**
