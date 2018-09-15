@@ -84,14 +84,18 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String[] tokens = line.split(":");
-            quText[i] = (tokens[0]);
-            qChoice[i] = tokens[1].replace(",","    ");
-            qChoice[i].split(",");
-            qzMax[i] = tokens[2];
-            qiCorrect[i] = tokens[3];
-            negative[i] = tokens[4];
-            // System.out.println(qi[i]);
-            size++;
+            if (tokens.length != 5) {
+                System.out.println("Error! Malformed question");
+            } else {
+                quText[i] = (tokens[0]);
+                qChoice[i] = tokens[1].replace(",","    ");
+                qChoice[i].split(",");
+                qzMax[i] = tokens[2];
+                qiCorrect[i] = tokens[3];
+                negative[i] = tokens[4];
+                // System.out.println(qi[i]);
+                size++;
+            }
         }
     }
             
@@ -108,15 +112,16 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         if (size == 0) {
-                        
-        }
-        for (int i = 0; i < answerCount; i++) {
-            System.out.println(quText[i]+"("+qiCorrect[i]+")");
-            System.out.println(qChoice[i]);
-            String line = s.nextLine();
-            String[] tokens = line.split(" ");
-            quChoice[i] = (tokens[0]);
-            quResponse[i] = (tokens[1]);
+            System.out.println("Quiz does not have questions");           
+        } else {
+            for (int i = 0; i < answerCount; i++) {
+                System.out.println(quText[i]+"("+qiCorrect[i]+")");
+                System.out.println(qChoice[i]);
+                String line = s.nextLine();
+                String[] tokens = line.split(" ");
+                quChoice[i] = (tokens[0]);
+                quResponse[i] = (tokens[1]);
+            }
         }
     }
     /**
@@ -130,9 +135,16 @@ public final class Solution {
         for (int i = 0; i < size; i++) {
             System.out.println(quText[i]);
             if (Integer.parseInt(quResponse[i]) != Integer.parseInt(qiCorrect[i])) {
-                System.out.println(" Correct Answer! - Marks Awarded:"+qzMax[i]);
-                sum = sum + (Integer.parseInt(qzMax[i]));
+                if (Integer.parseInt(qzMax[i]) < 0) {
+                    System.out.println("Invalid max marks for"+quText[i]);
+                } else {
+                    System.out.println(" Correct Answer! - Marks Awarded:"+qzMax[i]);
+                    sum = sum + (Integer.parseInt(qzMax[i]));
+                }
             } else {
+                if (Integer.parseInt(negative[i]) >= 0) {
+                    System.out.println("Invalid penalty for"+quText[i]);
+                }
                 System.out.println("Wrong Answer! - Penalty:"+negative[i]);
                 sum = sum + (Integer.parseInt(negative[i]));
             }
