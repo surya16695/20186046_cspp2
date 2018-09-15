@@ -127,6 +127,8 @@ public final class Solution {
         int sum = 0;
         for (int i = 0; i < size; i++) {
             if (quResponse[i] != qiCorrect[i]) {
+                System.out.println(quText[i]);
+                System.out.println("Wrong Answer! - Penalty:"+negative[i]);
                 sum = sum + (Integer.parseInt(negative[i]));
             } else {
                 sum = sum + (Integer.parseInt(qzMax[i]));
