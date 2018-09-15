@@ -81,10 +81,10 @@ public final class Solution {
         System.out.println(questionCount+"are added to the quiz");
         for (int i = 0; i < questionCount; i++) {
             String[] tokens = line.split(":");
-            qu[i] += tokens; 
-            System.out.println(Arrays.toString(tokens));
-            // String[] question = tokens[0];
-            // String[] choice = tokens[1];
+            qu[i] += tokens;
+            System.out.println(qu[i]);
+            // System.out.println(Arrays.toString(tokens[1]));
+
         }
     }
             
