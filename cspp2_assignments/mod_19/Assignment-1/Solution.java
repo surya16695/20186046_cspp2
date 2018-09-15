@@ -80,13 +80,13 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class.
         Quiz qui = new Quiz();
-        System.out.println(questionCount+"are added to the quiz");
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String[] tokens = line.split(":");
             if (tokens.length != 5) {
                 System.out.println("Error! Malformed question");
             } else {
+                System.out.println(questionCount+"are added to the quiz");
                 quText[i] = (tokens[0]);
                 qChoice[i] = tokens[1].replace(",","    ");
                 qChoice[i].split(",");
@@ -115,7 +115,7 @@ public final class Solution {
             System.out.println("Quiz does not have questions");           
         } else {
             for (int i = 0; i < answerCount; i++) {
-                System.out.println(quText[i]+"("+qiCorrect[i]+")");
+                System.out.println(quText[i]+"("+qzMax[i]+")");
                 System.out.println(qChoice[i]);
                 String line = s.nextLine();
                 String[] tokens = line.split(" ");
