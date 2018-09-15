@@ -127,10 +127,10 @@ public final class Solution {
         for (int i = 0; i < size; i++) {
             System.out.println(quText[i]);
             if (quResponse[i].equals(qiCorrect[i])) {
-                System.out.println("Wrong Answer! - Penalty:"+qzMax[i]);
+                System.out.println(" Correct Answer! - Marks Awarded:"+qzMax[i]);
                 sum = sum + (Integer.parseInt(qzMax[i]));
             } else {
-                System.out.println(" Correct Answer! - Marks Awarded:"+negative[i]);
+                System.out.println("Wrong Answer! - Penalty:"+negative[i]);
                 sum = sum + (Integer.parseInt(negative[i]));
             }
         }
