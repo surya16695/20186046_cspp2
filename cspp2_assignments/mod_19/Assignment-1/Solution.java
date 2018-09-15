@@ -41,13 +41,13 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                loadQuestions(s, Integer.parseInt(tokens[1]));
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-                startQuiz(s, q, Integer.parseInt(tokens[1]));
+                startQuiz(s, Integer.parseInt(tokens[1]));
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
@@ -68,12 +68,15 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static String[] qu = new String[10];
-    public static String[] q = new String[10];
-    public static String[] qi = new String[10];
-    public static String[] qz = new String[10];
+    public static String[] quText = new String[10];
+    public static String[] qChoice = new String[10];
+    public static String[] qiCorrect = new String[10];
+    public static String[] qzMax = new String[10];
+    public static String[] negative = new String[10];
+    public static String[] quChoice = new String[10];
+    public static String[] quResponse = new String[10];
     public static int size = 0;
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class.
@@ -82,17 +85,14 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String line = s.nextLine();
             String[] tokens = line.split(":");
-            qu[i] = (tokens[0]);
-            // quizs.add(qu[i]);
-            q[i] = tokens[1].replace(",","    ");
-            q[i].split(",");
-            qz[i] = tokens[2];
-            qi[i] = tokens[3];
-            System.out.println(qi[i]);
-            // qui.add(q[i]);
+            quText[i] = (tokens[0]);
+            qChoice[i] = tokens[1].replace(",","    ");
+            qChoice[i].split(",");
+            qzMax[i] = tokens[2];
+            qiCorrect[i] = tokens[3];
+            negative[i] = tokens[4];
+            // System.out.println(qi[i]);
             size++;
-            // System.out.println(qu[i]);
-            // System.out.println(q[i]);
         }
     }
             
@@ -104,16 +104,19 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
         for (int i = 0; i < answerCount; i++) {
-            System.out.println(qu[i]+"("+qi[i]+")");
-            System.out.println(q[i]);
+            System.out.println(quText[i]+"("+qiCorrect[i]+")");
+            System.out.println(qChoice[i]);
+            String line = s.nextLine();
+            String[] tokens = line.split(" ");
+            quChoice[i] = (tokens[0]);
+            quResponse[i] = (tokens[1]);
         }
     }
-
     /**
      * Displays the score report
      *
@@ -121,5 +124,13 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            if (quResponse[i] != qiCorrect[i]) {
+                sum = sum + (Integer.parseInt(negative[i]));
+            } else {
+                sum = sum + (Integer.parseInt(qzMax[i]));
+            }
+        }
     }
 }
