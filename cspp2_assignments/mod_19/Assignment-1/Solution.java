@@ -84,7 +84,7 @@ public final class Solution {
         for (int i = 0; i < questionCount; i++) {
             String[] tokens = line.split(":");
             qu[i] = (tokens[0]);
-            q[i] = tokens[1].replace(",","  ");
+            q[i] = tokens[1].replace(",","         ");
             q[i].split(",");
 
             System.out.println(qu[i]);
