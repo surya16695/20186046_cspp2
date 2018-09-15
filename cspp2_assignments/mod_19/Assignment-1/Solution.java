@@ -60,7 +60,6 @@ public final class Solution {
             }
         }
     }
-
     /**
      * Loads questions.
      *
@@ -131,6 +130,7 @@ public final class Solution {
                 System.out.println("Wrong Answer! - Penalty:"+negative[i]);
                 sum = sum + (Integer.parseInt(negative[i]));
             } else {
+                System.out.println(" Correct Answer! - Marks Awarded:"+qzMax[i]);
                 sum = sum + (Integer.parseInt(qzMax[i]));
             }
         }
