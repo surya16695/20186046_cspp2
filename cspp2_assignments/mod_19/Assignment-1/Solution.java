@@ -104,7 +104,9 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         for (int i = 0; i < answerCount; i++) {
-            System.out.println(qu[i]+"("+i+1+")");
+            int d = 0;
+            d += 1;
+            System.out.println(qu[i]+"("+d+")");
             System.out.println(q[i]);
         }
     }
