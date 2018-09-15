@@ -90,8 +90,8 @@ public final class Solution {
                 quText[i] = (tokens[0]);
                 qChoice[i] = tokens[1].replace(",","    ");
                 qChoice[i].split(",");
-                qzMax[i] = tokens[2];
-                qiCorrect[i] = tokens[3];
+                qiCorrect[i] = tokens[2];
+                qzMax[i] = tokens[3];
                 negative[i] = tokens[4];
                 // System.out.println(qi[i]);
                 size++;
