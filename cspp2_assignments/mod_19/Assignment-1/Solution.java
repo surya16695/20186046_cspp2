@@ -126,7 +126,7 @@ public final class Solution {
         int sum = 0;
         for (int i = 0; i < size; i++) {
             System.out.println(quText[i]);
-            if (quResponse[i].equals(qiCorrect[i])) {
+            if (Integer.parseInt(quResponse[i]) == Integer.parseInt(qiCorrect[i])) {
                 System.out.println(" Correct Answer! - Marks Awarded:"+qzMax[i]);
                 sum = sum + (Integer.parseInt(qzMax[i]));
             } else {
