@@ -70,6 +70,7 @@ public final class Solution {
      */
     public static String[] qu = new String[10];
     public static String[] q = new String[10];
+    public static String[] qi = new String[10];
     public static int size = 0;
     public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
@@ -84,6 +85,7 @@ public final class Solution {
             // quizs.add(qu[i]);
             q[i] = tokens[1].replace(",","    ");
             q[i].split(",");
+            qi[i] = tokens[2];
             // qui.add(q[i]);
             size++;
             // System.out.println(qu[i]);
@@ -104,9 +106,7 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         for (int i = 0; i < answerCount; i++) {
-            int d = 0;
-            d += 1;
-            System.out.println(qu[i]+"("+d+")");
+            System.out.println(qu[i]+"("+qi[i]+")");
             System.out.println(q[i]);
         }
     }
