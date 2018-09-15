@@ -86,6 +86,7 @@ public final class Solution {
             q[i] = tokens[1].replace(",","    ");
             q[i].split(",");
             qi[i] = tokens[2];
+            System.out.println(qi[i]);
             // qui.add(q[i]);
             size++;
             // System.out.println(qu[i]);
