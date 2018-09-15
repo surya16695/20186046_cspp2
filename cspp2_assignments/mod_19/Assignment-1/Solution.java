@@ -78,13 +78,17 @@ public final class Solution {
         // add the question objects to the quiz class.
         String line = s.nextLine();
         String[] qu = new String[10];
+        String[] q = new String[10];
         int size = 0;
         System.out.println(questionCount+"are added to the quiz");
         for (int i = 0; i < questionCount; i++) {
             String[] tokens = line.split(":");
             qu[i] = (tokens[0]);
+            q[i] = tokens[1];
+            q[i].split(",");
 
             System.out.println(qu[i]);
+            System.out.println(q[i]);
             // System.out.println(Arrays.toString(tokens[1]));
 
         }
