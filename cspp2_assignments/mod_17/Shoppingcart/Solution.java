@@ -69,7 +69,6 @@ class Item {
      *
      * @param      quant  The quant
      *
-     * @return     { description_of_the_return_value }
      */
     public void setQuantity(final int quant) {
         this.quantity = quant;
