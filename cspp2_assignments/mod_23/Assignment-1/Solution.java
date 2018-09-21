@@ -95,6 +95,7 @@ class Distance {
 public class Solution {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
+        try {
         String foldername = scan.nextLine();
         // Inpfromfolder i = new Inpfromfolder();
         final File folder = new File(foldername);
@@ -108,7 +109,6 @@ public class Solution {
         // s = s.trim();
         // s = s.substring(0, s.length()-4);
         s += "\n";
-        if (allfiles.length != 0) {
             // System.out.println("Entered if");
             for (File file1: allfiles) {
                 s += file1.getName() + "\t";
@@ -122,7 +122,7 @@ public class Solution {
                 s += "\n";
             }
             System.out.println(s);
-        } else {
+        } catch(Exception ex) {
             System.out.println("empty directory");
         }
         // f.loadWordstodict(filename1);
