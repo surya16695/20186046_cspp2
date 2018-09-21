@@ -71,8 +71,8 @@ class Item {
      *
      * @return     { description_of_the_return_value }
      */
-    public int setQuantity(final int quant) {
-        return this.quantity = quant;
+    public void setQuantity(final int quant) {
+        this.quantity = quant;
     }
     /**
      * Returns a string representation of the object.
