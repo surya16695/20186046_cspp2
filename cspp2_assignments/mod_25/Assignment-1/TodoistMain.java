@@ -11,17 +11,21 @@ class Todoist {
         t.add(task);
     }
     public Task getNextTask(String taskname) {
-        Task tas = new Task();
         for (int i = 0; i < t.size(); i++) {
             Task ta = t.get(i);
             if (ta.getassignedTo().equals(taskname)) {
                 if (ta.getimportant().equals("Important") &&
                 ta.getimportant().equals("Urgent") && ta.getstatus().equals("todo") ) {
-                    tas = ta;
+                    // Task tas = new Task(ta.getTitle(), ta.getassignedTo(), ta.gettimeToComplete(),
+                    //  ta.getimportant(), ta.geturgent(), ta.getstatus());
+                    return ta;
+                }
+                else {
+                    return null;
                 }
             }
         }
-        return tas;
+         return null;
     }
 
     public int totalTime4Completion() {
@@ -52,7 +56,7 @@ class Task {
     private String urgent;
     private String status;
     Task() {
-        
+
     }
     Task(String tit, String assigned, int time,
         String imp, String urge, String stat) {
