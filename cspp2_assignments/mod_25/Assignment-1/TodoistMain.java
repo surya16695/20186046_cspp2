@@ -24,6 +24,13 @@ class Todoist {
     public int totalTime4Completion() {
         return 1;
     }
+    public String toString() {
+        String a = "";
+        for (int i = 0; i < t.size(); i++) {
+            a += t.get(i)+"\n";   
+        }
+        return a;
+    }
 
 }
 class Task {
