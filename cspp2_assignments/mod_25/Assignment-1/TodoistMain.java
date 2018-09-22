@@ -20,7 +20,7 @@ class Todoist {
                     // Task tas = new Task(ta.getTitle(), ta.getassignedTo(), ta.gettimeToComplete(),
                     //  ta.getimportant(), ta.geturgent(), ta.getstatus());
                     j = 1;
-                    ta.toString();
+                    System.out.println(ta);
                 }
             }
         }
