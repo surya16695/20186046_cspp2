@@ -11,6 +11,7 @@ class Todoist {
         t.add(task);
     }
     public void getNextTask(String taskname) {
+        int j = 0;
         for (int i = 0; i < t.size(); i++) {
             Task ta = t.get(i);
             if (ta.getassignedTo().equals(taskname)) {
@@ -18,12 +19,13 @@ class Todoist {
                 ta.getimportant().equals("Urgent") && ta.getstatus().equals("todo") ) {
                     // Task tas = new Task(ta.getTitle(), ta.getassignedTo(), ta.gettimeToComplete(),
                     //  ta.getimportant(), ta.geturgent(), ta.getstatus());
+                    j = 1;
                     ta.toString();
                 }
-                else {
-                    System.out.println("null");
-                }
             }
+        }
+        if (j != 1) {
+            System.out.println("null");
         }
     }
 
