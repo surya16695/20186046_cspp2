@@ -1,15 +1,28 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * Class for todoist.
+ */
 class Todoist {
     private List<Task> t;
     Todoist(){
         t = new List<Task>();
 
     }
+    /**
+     * Adds a task.
+     *
+     * @param      task  The task
+     */
     public void addTask (Task task) {
         t.add(task);
     }
+    /**
+     * Gets the next task.
+     *
+     * @param      taskname  The taskname
+     */
     public void getNextTask(String taskname) {
         int j = 0;
         for (int i = 0; i < t.size(); i++) {
@@ -21,12 +34,18 @@ class Todoist {
                     System.out.println(ta);
                 }
             }
+            break;
         }
         if (j != 1) {
             System.out.println("null");
         }
     }
 
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int totalTime4Completion() {
         int sum = 0;
         for (int i = 0; i < t.size(); i++) {
@@ -38,6 +57,11 @@ class Todoist {
 
         return sum;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String a = "";
         for (int i = 0; i < t.size(); i++) {
@@ -47,6 +71,9 @@ class Todoist {
     }
 
 }
+/**
+ * Class for task.
+ */
 class Task {
     private String title;
     private String assignedTo;
@@ -57,6 +84,16 @@ class Task {
     Task() {
 
     }
+    /**
+     * Constructs the object.
+     *
+     * @param      tit       The tit
+     * @param      assigned  The assigned
+     * @param      time      The time
+     * @param      imp       The imp
+     * @param      urge      The urge
+     * @param      stat      The stat
+     */
     Task(String tit, String assigned, int time,
         String imp, String urge, String stat) {
         this.title = tit;
@@ -67,27 +104,62 @@ class Task {
         this.status = stat;
 
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         s += title+", "+assignedTo+", "+timeToComplete;
         s += ", "+important+", "+urgent+", "+status;
         return s;       
     }
+    /**
+     * Gets the title.
+     *
+     * @return     The title.
+     */
     public String getTitle() {
         return this.title;
     }    
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String getassignedTo() {
         return this.assignedTo;
     }    
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String getimportant() {
         return this.important;
     }    
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String geturgent() {
         return this.urgent;
     }    
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int gettimeToComplete() {
         return this.timeToComplete;
     }    
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String getstatus() {
         return this.status;
     }
