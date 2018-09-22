@@ -10,7 +10,7 @@ class Todoist {
     public void addTask (Task task) {
         t.add(task);
     }
-    public Task getNextTask(String taskname) {
+    public void getNextTask(String taskname) {
         for (int i = 0; i < t.size(); i++) {
             Task ta = t.get(i);
             if (ta.getassignedTo().equals(taskname)) {
@@ -18,14 +18,13 @@ class Todoist {
                 ta.getimportant().equals("Urgent") && ta.getstatus().equals("todo") ) {
                     // Task tas = new Task(ta.getTitle(), ta.getassignedTo(), ta.gettimeToComplete(),
                     //  ta.getimportant(), ta.geturgent(), ta.getstatus());
-                    return ta;
+                    ta.toString();
                 }
                 else {
-                    return null;
+                    System.out.println("null");
                 }
             }
         }
-         return null;
     }
 
     public int totalTime4Completion() {
@@ -121,7 +120,7 @@ public class TodoistMain {
                     System.out.println(todo);
                 break;
                 case "get-next":
-                    System.out.println(todo.getNextTask(tokens[1]));
+                    todo.getNextTask(tokens[1]);
                 break;
                 // case "get-next-n":
                 //     int n = Integer.parseInt(tokens[3]);
