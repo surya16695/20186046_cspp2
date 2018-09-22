@@ -32,8 +32,8 @@ class Todoist {
                 ta.getimportant().equals("Not Urgent") || ta.getstatus().equals("todo") ) {
                     j = 1;
                     System.out.println(ta);
-                    break;
                 }
+                break;
             }
         }
         if (j != 1) {
