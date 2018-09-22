@@ -61,16 +61,14 @@ class Todoist {
         List<Task> tasks= new List<Task>();
             int j = 0;
         for (int i = 0; i < t.size(); i++) {
-            for (int k = 0; k < n; k++) {
-                Task ta = t.get(i);
-                if (ta.getassignedTo().equals(name)) {
-                    if (ta.getimportant().equals("Important") &&
-                    ta.getimportant().equals(" Not Urgent") && ta.getstatus().equals("todo") ) {
-                        j = 1;
-                        tasks.add(ta);
-                    }
-                    break;
+            Task ta = t.get(i);
+            if (ta.getassignedTo().equals(name)) {
+                if (ta.getimportant().equals("Important") &&
+                ta.getimportant().equals(" Not Urgent") && ta.getstatus().equals("todo") ) {
+                    j = 1;
+                    tasks.add(ta);
                 }
+                break;
             }
             if (j != 1) {
                 System.out.println("null");
