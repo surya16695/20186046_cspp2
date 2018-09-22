@@ -59,9 +59,9 @@ class Todoist {
     }
     public Task[] getNextTask(String name, int n) {
         Task[] task = new Task[n];
-        for (int k = 0; k < n; k++) {
             int j = 0;
-            for (int i = 0; i < t.size(); i++) {
+        for (int i = 0; i < t.size(); i++) {
+            for (int k = 0; k < n; k++) {
                 Task ta = t.get(i);
                 if (ta.getassignedTo().equals(name)) {
                     if (ta.getimportant().equals("Important") &&
