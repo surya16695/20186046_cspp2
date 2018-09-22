@@ -155,6 +155,9 @@ public class TodoistMain {
         }
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
+        if (Integer.parseInt(tokens[3]) < 0) {
+            throw new Exception("Invalid timeToComplete "+tokens[3]);
+        }
         boolean important = tokens[4].equals("y");
         String impty = "";
         String urgen = "";
@@ -169,9 +172,13 @@ public class TodoistMain {
         }else {
             urgen = "Not Urgent";
         }
-        String status = tokens[6];
+        if (tokens[6].equals("todo") || tokens[6].equals("done")) {
+            String status = tokens[6];
+        }else {
+            throw new Exception("Invalid status "+tokens[6]);
+        }
         return new Task(
-            title, assignedTo, timeToComplete, impty, urgen, status);
+            title, assignedTo, timeToComplete, impty, urgen, tokens[6]);
     }
 
     /**
