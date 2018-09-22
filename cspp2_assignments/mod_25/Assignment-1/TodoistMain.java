@@ -30,7 +30,7 @@ class Todoist {
             }
         }
 
-        return 1;
+        return sum;
     }
     public String toString() {
         String a = "";
