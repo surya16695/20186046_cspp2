@@ -32,9 +32,9 @@ class Todoist {
                 ta.getimportant().equals("Not Urgent") || ta.getstatus().equals("todo") ) {
                     j = 1;
                     System.out.println(ta);
+                    break;
                 }
             }
-            break;
         }
         if (j != 1) {
             System.out.println("null");
@@ -259,19 +259,19 @@ public class TodoistMain {
         String urgen = "";
         if ( important) {
             impty = "Important";
-        }else {
+        } else {
             impty = "Not Important";
         }  
         boolean urgent = tokens[5].equals("y");
         if ( urgent ) {
             urgen = "Urgent";
-        }else {
+        } else {
             urgen = "Not Urgent";
         }
         if (tokens[6].equals("todo") || tokens[6].equals("done")) {
             String status = tokens[6];
-        }else {
-            throw new Exception("Invalid status "+tokens[6]);
+        } else {
+            throw new Exception ("Invalid status "+tokens[6]);
         }
         return new Task(
             title, assignedTo, timeToComplete, impty, urgen, tokens[6]);
