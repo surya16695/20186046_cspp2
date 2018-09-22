@@ -11,16 +11,18 @@ class Todoist {
         t.add(task);
     }
     public Task getNextTask(String taskname) {
-        // return t.get(indexOf(taskname));
+        for (int i = 0; i < t.size(); i++) {
+            Task ta = t.get(i);
+            if (ta.getassignedTo().equals(taskname)) {
+                if (ta.getimportant().equals("Important") &&
+                ta.getimportant().equals("Urgent") && ta.getstatus().equals("todo") ) {
+                    return ta;
+                }
+            }
+        }
         return null;
     }
-    // public int indexOf(String taskname) {
-    //     for (int i = 0; i < t.size(); i++) {
-    //         if ((taskname)) {
-    //             return i;
-    //         }
-    //     }
-    // }
+
     public int totalTime4Completion() {
         int sum = 0;
         for (int i = 0; i < t.size(); i++) {
