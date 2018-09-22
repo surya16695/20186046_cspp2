@@ -29,7 +29,7 @@ class Todoist {
             Task ta = t.get(i);
             if (ta.getassignedTo().equals(taskname)) {
                 if (ta.getimportant().equals("Important") ||
-                ta.getimportant().equals("Not Urgent") && ta.getstatus().equals("todo") ) {
+                ta.getimportant().equals("Urgent") && ta.getstatus().equals("todo") ) {
                     j = 1;
                     System.out.println(ta);
                 }
