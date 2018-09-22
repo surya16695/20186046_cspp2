@@ -22,6 +22,14 @@ class Todoist {
     //     }
     // }
     public int totalTime4Completion() {
+        int sum = 0;
+        for (int i = 0; i < t.size(); i++) {
+            Task tas = t.get(i);
+            if (tas.getstatus().equals("todo")) {
+                sum += tas.gettimeToComplete();
+            }
+        }
+
         return 1;
     }
     public String toString() {
@@ -56,24 +64,24 @@ class Task {
         s += ", "+important+", "+urgent+", "+status;
         return s;       
     }
-    // public String getTitle() {
-    //     return this.title;
-    // }    
-    // public String getassignedTo() {
-    //     return this.assignedTo;
-    // }    
-    // public String getimportant() {
-    //     return this.important;
-    // }    
-    // public String geturgent() {
-    //     return this.urgent;
-    // }    
-    // public String gettimeToComplete() {
-    //     return this.timeToComplete;
-    // }    
-    // public String getstatus() {
-    //     return this.status;
-    // }
+    public String getTitle() {
+        return this.title;
+    }    
+    public String getassignedTo() {
+        return this.assignedTo;
+    }    
+    public String getimportant() {
+        return this.important;
+    }    
+    public String geturgent() {
+        return this.urgent;
+    }    
+    public int gettimeToComplete() {
+        return this.timeToComplete;
+    }    
+    public String getstatus() {
+        return this.status;
+    }
 }
 /**
   * write your code below this comment
