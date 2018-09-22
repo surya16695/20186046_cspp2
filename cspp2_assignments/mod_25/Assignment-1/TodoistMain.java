@@ -151,7 +151,7 @@ public class TodoistMain {
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
         if (tokens[1].length() == 0) {
-            
+            throw new Exception("Title not provided");
         }
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
