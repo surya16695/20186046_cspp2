@@ -18,6 +18,23 @@ class Todoist {
     public void addTask (Task task) {
         t.add(task);
     }
+    // public void getNextTask(final String name, final int count) {
+    //     Task noOfTasks = new Task[count];
+    //     int num = 0;
+    //     for (int i = 0; i < size; i++) {
+    //         if (tasks[i].assignedTo.equals(name)
+    //             && tasks[i].status.equals("todo")) {
+    //             if (tasks[i].important && !tasks[i].urgent) {
+    //                 noOfTasks[num] = tasks[i];
+    //                 num++;
+    //                 if (num == count) {
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     return noOfTasks;
+    // }
     /**
      * Gets the next task.
      *
@@ -29,7 +46,7 @@ class Todoist {
             Task ta = t.get(i);
             if (ta.getassignedTo().equals(taskname)) {
                 if (ta.getimportant().equals("Important") &&
-                ta.getimportant().equals(" Not Urgent") && ta.getstatus().equals("todo") ) {
+                ta.getimportant().equals(" Not Urgent") || ta.getstatus().equals("todo") ) {
                     j = 1;
                     System.out.println(ta);
                 }
@@ -71,6 +88,7 @@ class Todoist {
     }
 
 }
+
 /**
  * Class for task.
  */
