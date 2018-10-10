@@ -2,192 +2,173 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+
 /**
  * Class for set.
- * @author     : Surya
  */
 class Set {
-    //
-    // your code goes here... Good luck :-)
-    //
+    //your code goes here...
+    //Good luck :-)
     /**
-    final int declaration.
-    **/
-    private static final int TEN = 10;
-    /**
-     * { var_description }.
-     */
-    private int[] set;
-    /**
-     * { var_description }.
-     */
+    * private variable size of int type.
+    */
     private int size;
     /**
-     * Constructs the object.
+     * private array of int type.
+     */
+    private int[] array;
+    /**
+     * Constructor for set object.
      */
     Set() {
-        set = new int[TEN];
         size = 0;
+        final int variable = 10;
+        array = new int[variable];
     }
     /**
-     * { function_description }.
+     * size method.
      *
-     * @param      item  The item
-     */
-    public void add(final int item) {
-        //Inserts the specified element at the end of the list.
-        if (size >= set.length) {
-            resize();
-        }
-        set[size++] = item;
-    }
-    /**
-     * { function_description }.
-     *
-     * @return     { description_of_the_return_value }
+     * @return    returns the size of array.
      */
     public int size() {
         return size;
     }
     /**
-     * { function_description }.
+     * contains method.
+     *
+     * @param      searchVariable  The search variable
+     *
+     * @return returns true if the element is in array.
      */
-    public void resize() {
-        set = Arrays.copyOf(set, 2 * size);
-    }
-    /**
-     * { function_description }.
-     *
-     * @param      index  The index
-     *
-     * @return     { description_of_the_return_value }.
-     */
-    public int get(final int index) {
-        // Replace the code below to write the code for get
-        if (index >= 0 && index < size) {
-            return set[index];
-        }
-        return -1;
-    }
-    /**
-     * Returns a string representation of the object.
-     *
-     * @return     String representation of the object.
-     */
-    public String toString() {
-        // Replace the code below
-        if (size == 0) {
-            return "{}";
-        }
-        String s = "{";
-        int i;
-        for (i = 0; i < size - 1; i++) {
-            s += set[i] + ", ";
-        }
-        s += set[i] + "}";
-        return s;
-    }
-    /**
-     * { function_description }.
-     *
-     * @param      item  The item
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public boolean contains(final int item) {
-        // Replace the code below
-        // return indexOf(item) != -1;
+    public boolean contains(final int searchVariable) {
         for (int i = 0; i < size; i++) {
-            if (item == set[i]) {
+            if (array[i] == searchVariable) {
                 return true;
             }
         }
         return false;
     }
     /**
-     * { function_description }.
+     * Returns a string representation of the array.
+     *
+     * @return     String representation of the array.
+     */
+    public String toString() {
+       if (size == 0) {
+            return "{}";
+        }
+        String resultantString = "{";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            resultantString = resultantString + array[i] + ", ";
+        }
+        resultantString = resultantString + array[i] + "}";
+        return resultantString;
+    }
+    /**
+     * adds the new element to the array.
+     *
+     * @param      variable  The variable
+     */
+    public void add(final int variable) {
+         int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (array[i] != variable) {
+                count++;
+            }
+        }
+        if (count == size) {
+            array[size++] = variable;
+        }
+    }
+    /**
+     * add the new array to old array.
      *
      * @param      newArray  The new array
      */
     public void add(final int[] newArray) {
-        // if (size + newArray.length >= list.length) {
-        //     resize();
-        // }
-        for (int i = 0; i < newArray.length; i++) {
-            if (!contains(newArray[i])) {
-                add(newArray[i]);
+         if (newArray.length > array.length) {
+            array = resize();
+        }
+           for (int i : newArray) {
+            int count = 0;
+            for (int j = 0; j < size; j++) {
+                if (array[j] != i) {
+                    count++;
+                }
+            }
+            if (count == size) {
+                array[size++] = i;
             }
         }
     }
     /**
-     * Searches for the first match.
+     * resize method.
      *
-     * @param      item  The item
-     *
-     * @return     { description_of_the_return_value }
+     * @return returns the resized array.
      */
-    public int indexOf(final int item) {
-        // Replace the code below
-        for (int i = 0; i < size; i++) {
-            if (set[i] == item) {
-                return i;
-            }
-        }
-        return -1;
+    public int[] resize() {
+        return Arrays.copyOf(array, array.length * 2);
     }
     /**
-     * { function_description }.
+     * intersection method.
      *
-     * @param      newArray  The new array
+     * @param      inputSet  The input set
      *
-     * @return     { description_of_the_return_value }
+     * @return returns the intersection set of two sets.
      */
-    public Set intersection(final Set newArray) {
-        Set sot = new Set();
-        int count = 0;
-        for (int i = 0; i < size(); i++) {
-            if (newArray.contains(get(i))) {
-                int temp = (get(i));
-                sot.add(temp);
+    public Set intersection(final Set inputSet) {
+        Set outputSet = new Set();
+        for (int i = 0; i < this.size; i++) {
+            for (int j = 0; j < inputSet.size; j++) {
+                if (this.array[i] == inputSet.array[j]) {
+                    outputSet.add(array[i]);
+                }
             }
         }
-        if (sot.size == 0) {
-            return sot;
-        }
-        return sot;
+        return outputSet;
     }
     /**
-     * { function_description }.
+     * retainall method.
      *
-     * @param      newArray  The new array
+     * @param      intArray  The int array
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the elements present in both sets.
      */
-    public Set retainAll(final int[] newArray) {
-        Set dot = new Set();
-        // int count = 0;
-        for (int i = 0; i < newArray.length; i++) {
-            dot.add(newArray[i]);
-        }
-        return intersection(dot);
-    }
-    /**
-     * { function_description }.
-     *
-     * @param      t     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int[][] cartesianProduct(final Set t) {
-        int[][] a = new int[size()][t.size()];
-        for (int i: set) {
-            for (int j = 0; j < t.size(); j++) {
-                a[i][j] = t.get(indexOf(j));
+    public Set retainAll(final int[] intArray) {
+        Set outputSet = new Set();
+        for (int i : this.array) {
+            for (int j = 0; j < intArray.length; j++) {
+                if (i == intArray[j]) {
+                    outputSet.add(i);
+                }
             }
-        } if (size() == 0 || t.size() == 0) {
-            return a;
         }
-        return a;
+        return outputSet;
+    }
+    /**
+     * cartesian product method.
+     *
+     * @param      outputSet  The output set
+     *
+     * @return     returns the cartesian product.
+     */
+    public int[][] cartesianProduct(final Set outputSet) {
+       int numberOfElements = this.size * outputSet.size;
+        int[][] newArray;
+        newArray = new int[numberOfElements][2];
+        int i = 0;
+            for (int k = 0; k < this.size; k++) {
+                for (int j = 0; j < outputSet.size; j++) {
+
+                newArray[i][0] = this.array[k];
+                newArray[i][1] = outputSet.array[j];
+                i++;
+
+                }
+            }
+
+    return newArray;
     }
 }
 /**
@@ -259,6 +240,7 @@ public final class Solution {
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
+                // System.out.println(s);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(s.intersection(t));
@@ -275,9 +257,16 @@ public final class Solution {
                 t = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
+                int a = s.size();
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                int b = t.size();
+                if (a == 0 || b == 0) {
+                    System.out.println("null");
+                } else {
+    System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                }
+
                 break;
                 default:
                 break;
