@@ -43,16 +43,16 @@ public class Solution {
                 shoppingObject.showCart();
                 break;
                 case "totalAmount":
-                System.out.println("totalAmount: " +
-                 shoppingObject.getTotalAmount());
+                System.out.println("totalAmount: "
+                 + shoppingObject.getTotalAmount());
                 break;
                 case "payableAmount":
-                    System.out.println("Payable amount: " +
-                     shoppingObject.getPayableAmount());
+                    System.out.println("Payable amount: "
+                     + shoppingObject.getPayableAmount());
                 break;
                 case "print":
-                    System.out.println("Name" + "   " +
-                     "quantity" + "   " + "Price");
+                    System.out.println("Name" + "   "
+                     + "quantity" + "   " + "Price");
                     shoppingObject.printInvoice();
                 break;
                 case "coupon":
